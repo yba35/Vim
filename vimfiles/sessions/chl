@@ -1,0 +1,92 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 L:\CHL_doc_yba\chl.project.vim
+badd +17 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\VALID\tests.filter
+badd +336 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_COMMON\SOURCE\CP_SecureKernel\SecureBoot\Src\SB_EepromUserData.s90
+badd +36 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_ML_ALD\VARIANT\ML_ALD_DBG\asm.cfg
+badd +335 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_ML_ALD\VARIANT\ML_ALD_DBG\lnk.xcl
+badd +20 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_ML_ALD\VARIANT\ML_ALD_DBG\lnk.cfg
+badd +7654 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\RELEASE\CHL_ML_ALD\ML_ALD_DBG\EMU\ML_ALD_DBG.adr
+badd +3133 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\VALID\LOCAL\VAL_CHL_ML_ALD\_SIGN\DBG\DN400AL0211\BN_Seg0\SIMU\Journal.jrl
+badd +86 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\VALID\LOCAL\Config.ini
+badd +1 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_COMMON\SOURCE\CP_SecureKernel\SecureRoutine\Src\SR_Core.s90
+badd +89 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_DAUGHTER\SOURCE\DAUGHTER\Debug\Inc\DBG_QASecureRoutine.s90
+badd +15155 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\RELEASE\CHL_ML_ALD\ML_ALD_DBG\EMU\ML_ALD_DBG.s28
+badd +150 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_DAUGHTER\SOURCE\DAUGHTER\Debug\Inc\DBG_QASecureRoutine.h
+badd +1243 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_DAUGHTER\SOURCE\DAUGHTER\Debug\Src\DBG_Commands.s90
+badd +148 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_COMMON\SOURCE\CP_SecureKernel\SecureBoot\Src\SB_EepromSupData.s90
+badd +67 C:\cygwin\home\bajot\.bashrc
+badd +1 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\TOOLS\PROJECT\SRC2PRJ\findStringInProjectFiles.sh
+badd +22 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\TOOLS\PROJECT\SRC2PRJ\updateProjectFilesDb.sh
+badd +1540 l:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_DAUGHTER\SOURCE\DAUGHTER\Emm\Inc\Emm_Cmd.h
+badd +1 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\TOOLS\LOCAL\Local.sh
+badd +234 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_ML_ALD\VARIANT\BuildPatchTestVariants.sh
+badd +152 L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_DAUGHTER\SOURCE\DAUGHTER\Debug\Src\DBG_SecureRoutine.S90
+args L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_ML_ALD\VARIANT\ML_ALD_DBG\[BufExplorer]
+winpos 500 0
+edit L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_COMMON\SOURCE\CP_SecureKernel\SecureRoutine\Src\SR_Core.s90
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+wincmd _ | wincmd |
+split
+2wincmd k
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe '1resize ' . ((&lines * 27 + 43) / 86)
+exe '2resize ' . ((&lines * 27 + 43) / 86)
+exe '3resize ' . ((&lines * 28 + 43) / 86)
+argglobal
+let s:l = 113 - ((0 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+113
+normal! 0
+wincmd w
+argglobal
+edit L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\VALID\tests.filter
+let s:l = 17 - ((0 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+17
+normal! 0
+wincmd w
+argglobal
+edit L:\TRK\0023_CSSD1_CHL_SC_Software_Development_L1\DEV\CHL_DAUGHTER\SOURCE\DAUGHTER\Debug\Inc\DBG_QASecureRoutine.s90
+let s:l = 89 - ((0 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+89
+normal! 029l
+wincmd w
+3wincmd w
+exe '1resize ' . ((&lines * 27 + 43) / 86)
+exe '2resize ' . ((&lines * 27 + 43) / 86)
+exe '3resize ' . ((&lines * 28 + 43) / 86)
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=80 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . s:sx
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

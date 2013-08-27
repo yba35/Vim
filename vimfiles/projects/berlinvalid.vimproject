@@ -1,0 +1,2143 @@
+
+BerlinValid=T:\Projets\Berlin\DEV CD=. in=in.vim {
+ About.html
+ CreateSvnIgnoreScript.sh
+ Dev.chm
+ in.vim
+ Index.html
+ Readme.txt
+ Refresh.sh
+ ABOUT=ABOUT {
+  Dev.dxt
+  Index.dxt
+ }
+ BERLIN_CP=BERLIN_CP {
+  About.html
+  ABOUT=ABOUT {
+   BerlinCp.dxt
+  }
+  SOURCE=SOURCE {
+   CP_Foundation=CP_Foundation {
+    CP_Main=CP_Main {
+     Doc=Doc {
+      DT_A2Atmel_SDD_DateManager_0.2_draft.doc
+     }
+     Inc=Inc {
+      CPM_CommandHandler.h
+      CPM_UserConstants.h
+      CPM_USER_MACRO_SECURITY.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      CPM_CmdHdlerUtils.s90
+      CPM_CommandHandler.s90
+      CPM_Initialization.s90
+      CPM_RamVar.s90
+      CPM_UserRoutine.s90
+     }
+     Test=Test {
+     }
+    }
+    CP_Utils=CP_Utils {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      CPU_Basics.h
+      CPU_Secure.h
+      CPU_TrackConst.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      CPU_Basics.s90
+      CPU_Secu_RamVar.s90
+      CPU_Secure.s90
+     }
+     Test=Test {
+     }
+    }
+    Communication=Communication {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      COM_Protocol.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      COM_T0Protocol.s90
+      COM_T0RamVar.s90
+      COM_T14Protocol.s90
+      COM_T14RamVar.s90
+      COM_T1Protocol.s90
+      COM_T1RamVar.s90
+     }
+     Test=Test {
+     }
+    }
+    SK_Interface=SK_Interface {
+     Doc=Doc {
+      DT_A2Atmel_SDD_CommandHandler_0.2_draft.doc
+     }
+     Inc=Inc {
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      SKI_Dispatcher.s90
+     }
+     Test=Test {
+     }
+    }
+   }
+   CP_SecureKernel=CP_SecureKernel {
+    CHF=CHF {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      CHF.h
+      MACRO_CHF.h
+      ecc_low_level.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      CHF.s90
+      CHF_core.s90
+      ecc_low_level.s90
+      m_ecm_g.s90
+     }
+     Test=Test {
+     }
+    }
+    CRC16=CRC16 {
+     Doc=Doc {
+     }
+     Inc=Inc {
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      Crc_Checksum.s90
+      drv_crc16.s90
+     }
+     Test=Test {
+     }
+    }
+    Crypto=Crypto {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      InterfaceCrypto.h
+      absolute_track_value_utilities.h
+      aes.h
+      crypto.h
+      des.h
+      idea.h
+      md5.h
+      mdc2_des.h
+      rsa.h
+      sha256.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      absolute_track_value_utilities.s90
+      des.s90
+      idea.s90
+      mdc2_des.s90
+      sha256.s90
+     }
+     Test=Test {
+     }
+    }
+    Dispatcher=Dispatcher {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      drv_Dispatcher.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      Drv_Dispatcher.s90
+     }
+     Test=Test {
+      user.s90
+     }
+    }
+    Documentation=Documentation {
+     secure kernel design.pdf
+    }
+    Eeprom=Eeprom {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      driver.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      drv_nvmxp_SK.s90
+     }
+     Test=Test {
+     }
+    }
+    InputOutput=InputOutput {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      Drv_IO_T14.h
+      IO.h
+      SessionKey.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      Drv_IO_ATR.s90
+      Drv_IO_T14.s90
+      Drv_IO_UART.s90
+      InterfaceKey.s90
+      SessionKey.s90
+     }
+     Test=Test {
+     }
+    }
+    Patch=Patch {
+     Inc=Inc {
+      patch_commit_sk.h
+     }
+     Src=Src {
+      patch_commit_sk.s90
+     }
+    }
+    RNG=RNG {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      rng.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      DVR_RNG.s90
+      SC16_RNG.s90
+     }
+     Test=Test {
+     }
+    }
+    SC16=SC16 {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      CryptoSC16.h
+      sc16.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      CryptoSC16.s90
+      sc16_core_driver.s90
+      sc16_low_level.s90
+     }
+     Test=Test {
+     }
+    }
+    SecureBoot=SecureBoot {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      SB.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      ATR.s90
+      Eeprom_sup_data.s90
+      Eeprom_user_data.s90
+      Flash_sup_data.s90
+      PatchWork.s90
+      SB.s90
+      globalvar.s90
+     }
+     Test=Test {
+     }
+    }
+    SecureRoutine=SecureRoutine {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      SecureRoutine.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      SecureRoutine.s90
+     }
+     Test=Test {
+     }
+    }
+    SecurityAndConfig=SecurityAndConfig {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      Configuration.h
+      Hardware_AT90SC.h
+      Hardware_AT90SC_3696.h
+      Hardware_AT90SC_72144.h
+      MACRO.h
+      MACRO_Math.h
+      MACRO_SECURITY.h
+      iomacro.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      SK_SecuUtilities.s90
+      configuration.s90
+      configuration_CLE.s90
+      crypto_utilities.s90
+      reset.s90
+     }
+     Test=Test {
+     }
+    }
+    Timer=Timer {
+     Doc=Doc {
+     }
+     Inc=Inc {
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      drv_timer_SK.s90
+     }
+     Test=Test {
+     }
+    }
+   }
+   DAUGHTER=DAUGHTER {
+    Aem=Aem {
+     Inc=Inc {
+      AEM_Const.h
+     }
+     Src=Src {
+      AEM_Crypto.s90
+      AEM_E2pConst.s90
+      AEM_KeyManager.s90
+      AEM_Manager.s90
+      AEM_RamVar.s90
+      AEM_Translator.s90
+      AEM_Unwrapper.s90
+      AEM_Utilities.s90
+     }
+    }
+    ApplicationLibraries=ApplicationLibraries {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      AL_DBUtilities.h
+      AL_DateManager.h
+      AL_DidManagement.h
+      AL_HashSigning.h
+      AL_KeyManagement.h
+      AL_KeySearch.h
+      AL_MACRO.h
+      AL_MessageDecrypt.h
+      AL_PinCodeUtilities.h
+      AL_RivetCheck.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      AL_DBUtilities.s90
+      AL_DateManager.s90
+      AL_DateMgr_E2pVar.s90
+      AL_DidManagement.s90
+      AL_E2pConst.s90
+      AL_HashSigning.s90
+      AL_HashSigning_RamVar.s90
+      AL_InterfaceCrypto.s90
+      AL_KeyManagement.s90
+      AL_LcmDecrypt.s90
+      AL_LcmEncrypt.s90
+      AL_MessageDecrypt.s90
+      AL_PinCodeUtilities.s90
+      AL_RamVar.s90
+      AL_RivetCheck.s90
+      AL_Utilities.s90
+     }
+     Test=Test {
+     }
+    }
+    Ccm=Ccm {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      Ccm.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      CCM_RamVarE2pConst.s90
+      CCM_Treatment.s90
+     }
+     Test=Test {
+     }
+    }
+    Crypto=Crypto {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      CRY_Al.h
+      CRY_Cbc.h
+      CRY_Hmac_Sha256_Driver.h
+      CRY_Mdc.h
+      CRY_Rivet.h
+      CRY_Rsa_Key_Signature.h
+      CRY_Rsa_Keys_Decompression.h
+      CRY_Sha256_Driver.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      CRY_Al.s90
+      CRY_Cbc.s90
+      CRY_Cbc_Idea.s90
+      CRY_Crc32.s90
+      CRY_Hmac_Sha256_Driver.s90
+      CRY_Mdc.s90
+      CRY_Rsa_Keys_Decompression.s90
+     }
+     Test=Test {
+     }
+    }
+    DGH_Init=DGH_Init {
+     Doc=Doc {
+     }
+     Inc=Inc {
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      DGH_Initialization.s90
+     }
+     Test=Test {
+     }
+    }
+    Database=Database {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      dataPerso.h
+      database.h
+      datamodel.h
+      Dnasql.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      DB_DataModel.s90
+      DB_DataPerso.s90
+      DB_DataPerso_Aladin.s90
+      DB_DataPerso_MG.s90
+      DB_Dnasql.s90
+      DB_Manager.s90
+      DB_Ram.s90
+      DB_Transaction.s90
+      DB_Update.s90
+     }
+     Test=Test {
+      Inc=Inc {
+       MLN_Commands_SK.h
+       driver.h
+      }
+      Src=Src {
+       ALD_CommandHandler.s90
+       CMN_Initialization.s90
+      }
+     }
+    }
+    Debug=Debug {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      DBG_DebugCommands.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      DBG_CommandHandler.s90
+      DBG_Commands.s90
+      DBG_E2pConst.s90
+     }
+     Test=Test {
+     }
+    }
+    Ecm=Ecm {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      DataTools.h
+      Ecm.h
+      MACRO_32BitOp.h
+      Macro_Rec_Def.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      ECM_AccessEquation.s90
+      ECM_CaidFunction.s90
+      ECM_CameleonPurchase.s90
+      ECM_CheckPreliminary.s90
+      ECM_E2pConst.s90
+      ECM_OptionalParam.s90
+      ECM_ProcessRightUpdate.s90
+      ECM_RamVar.s90
+      ECM_SecurityFormat.s90
+      ECM_SegmentFunction.s90
+      ECM_SendResponse.s90
+      ECM_Treatment.s90
+      ECM_dnasql.s90
+     }
+     Test=Test {
+      ECM_test.s90
+     }
+    }
+    Emm=Emm {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      Emm.h
+      Emm_Cmd.h
+      Mac_Emm.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      EMM_Cmd01.s90
+      EMM_Cmd02.s90
+      EMM_Cmd03.s90
+      EMM_Cmd04.s90
+      EMM_Cmd11.s90
+      EMM_Cmd12.s90
+      EMM_Cmd14.s90
+      EMM_Cmd15.s90
+      EMM_Cmd17.s90
+      EMM_Cmd1C.s90
+      EMM_Cmd1D.s90
+      EMM_Cmd20.s90
+      EMM_Cmd24.s90
+      EMM_Cmd25.s90
+      EMM_Cmd26.s90
+      EMM_Cmd2C.s90
+      EMM_Cmd30.s90
+      EMM_Cmd31.s90
+      EMM_Cmd34.s90
+      EMM_Cmd35.s90
+      EMM_Cmd38.s90
+      EMM_Cmd3D.s90
+      EMM_Cmd50.s90
+      EMM_Cmd51.s90
+      EMM_Cmd54.s90
+      EMM_Cmd56.s90
+      EMM_Cmd57.s90
+      EMM_Cmd5A.s90
+      EMM_Cmd5C.s90
+      EMM_Cmd80_BF.s90
+      EMM_CmdHandler.s90
+      EMM_E2pConst.s90
+      EMM_Functions.s90
+      EMM_RamVar.s90
+      EMM_SecurityFormat.s90
+      EMM_Treatment.s90
+     }
+     Test=Test {
+     }
+    }
+    Exm=Exm {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      Exm.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      EXM_Dispatcher.s90
+      EXM_RamVar.s90
+     }
+     Test=Test {
+     }
+    }
+   }
+   PI_ALD=PI_ALD {
+    ALD=ALD {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      ALD_CommandHandler.h
+      ALD_Command_CCM.h
+      ALD_Command_ECM.h
+      ALD_Command_GTV.h
+      ALD_Command_HS.h
+      ALD_Command_SK.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      ALD_ATR.s90
+      ALD_CommandHandler.s90
+      ALD_Command_CCM.s90
+      ALD_Command_ECM.s90
+      ALD_Command_EMM.s90
+      ALD_Command_GST.s90
+      ALD_Command_GTM.s90
+      ALD_Command_GTV.s90
+      ALD_Command_GUA.s90
+      ALD_Command_HS.s90
+      ALD_Command_SK.s90
+      ALD_Commands.s90
+      ALD_E2pConst.s90
+      ALD_RamVar.s90
+      ALD_Utilities.s90
+     }
+     Test=Test {
+     }
+    }
+   }
+   PI_BTC=PI_BTC {
+    BTC=BTC {
+     Inc=Inc {
+      BTC_Const.h
+      BTC_ConstCmd.h
+     }
+     Src=Src {
+      BTC_ATR.s90
+      BTC_Chv.s90
+      BTC_Crypto.s90
+      BTC_Dispatcher.s90
+      BTC_E2pConst.s90
+      BTC_Ecm.s90
+      BTC_Emm.s90
+      BTC_Hardcoded.s90
+      BTC_RamVar.s90
+      BTC_ReadIccid.s90
+      BTC_ReadProduct.s90
+      BTC_Utilities.s90
+      BTC_VerifyAdm7.s90
+     }
+    }
+   }
+   PI_MLN=PI_MLN {
+    MLN=MLN {
+     Doc=Doc {
+     }
+     Inc=Inc {
+      MLN_CmdHdler.h
+      MLN_Commands_EXM.h
+      MLN_Commands_GCCM.h
+      MLN_Commands_GR.h
+      MLN_Commands_SK.h
+      MLN_Commands_SPC.h
+      MLN_Utilities.h
+     }
+     Pseudo_c=Pseudo_c {
+     }
+     Src=Src {
+      MLN_ATR.s90
+      MLN_CommandHandler.s90
+      MLN_Commands.s90
+      MLN_Commands_EXM.s90
+      MLN_Commands_FC.s90
+      MLN_Commands_GCCM.s90
+      MLN_Commands_GR.s90
+      MLN_Commands_HS.s90
+      MLN_Commands_LCM.s90
+      MLN_Commands_PC.s90
+      MLN_Commands_SK.s90
+      MLN_Commands_SPC.s90
+      MLN_RamE2p_Commands.s90
+      MLN_RamE2p_GR.s90
+      MLN_RamE2p_PC.s90
+      MLN_RamE2p_SK.s90
+      MLN_RamE2p_SPC.s90
+      MLN_Utilities.s90
+     }
+     Test=Test {
+     }
+    }
+   }
+  }
+  VARIANT=VARIANT {
+   About.html
+   ABOUT=ABOUT {
+    Variant.dxt
+   }
+   ARIEL_DBG=ARIEL_DBG {
+    About.html
+    LaunchCspy.sh
+    Makefile
+    Modules.ini
+    Src2Prj.sh
+    asm.cfg
+    cc.cfg
+    lnk.cfg
+    lnk.xcl
+    RamSegments.h
+    ABOUT=ABOUT {
+     ArielDbg.dxt
+    }
+    datatest=datatest {
+     D_A2_TNT_AT90SC3696CT_CARD.mac
+     D_A2_TNT_AT90SC72144CT_CARD.mac
+     UA_000098832384.s19
+     UA_000098832384_Macem.s19
+    }
+   }
+   BERLIN_DBG=BERLIN_DBG {
+    About.html
+    BERLIN_DBG.prj
+    BetaValid.sh
+    LaunchCspy.sh
+    Makefile
+    Modules.ini
+    Src2Prj.sh
+    asm.cfg
+    cc.cfg
+    lnk.cfg
+    lnk.xcl
+    RamSegments.h
+    ABOUT=ABOUT {
+     BerlinDbg.dxt
+    }
+    DEBUG=DEBUG {
+     EMU=EMU {
+      Modules.dep
+      full.log
+      null.log
+      BIN=BIN {
+       BERLIN_DBG.adr
+       BERLIN_DBG.d90
+       BERLIN_DBG.map
+      }
+      LST=LST {
+       AEM_Crypto.lst
+       AEM_E2pConst.lst
+       AEM_KeyManager.lst
+       AEM_Manager.lst
+       AEM_RamVar.lst
+       AEM_Translator.lst
+       AEM_Unwrapper.lst
+       AEM_Utilities.lst
+       ALD_ATR.lst
+       ALD_CommandHandler.lst
+       ALD_Command_ECM.lst
+       ALD_Command_EMM.lst
+       ALD_Command_GST.lst
+       ALD_Command_GTM.lst
+       ALD_Command_GTV.lst
+       ALD_Command_GUA.lst
+       ALD_Command_SK.lst
+       ALD_Commands.lst
+       ALD_E2pConst.lst
+       ALD_RamVar.lst
+       ALD_Utilities.lst
+       AL_DBUtilities.lst
+       AL_DateManager.lst
+       AL_DateMgr_E2pVar.lst
+       AL_DidManagement.lst
+       AL_E2pConst.lst
+       AL_InterfaceCrypto.lst
+       AL_KeyManagement.lst
+       AL_MessageDecrypt.lst
+       AL_PinCodeUtilities.lst
+       AL_RamVar.lst
+       AL_RivetCheck.lst
+       AL_Utilities.lst
+       ATR.lst
+       BTC_ATR.lst
+       BTC_Chv.lst
+       BTC_Crypto.lst
+       BTC_Dispatcher.lst
+       BTC_E2pConst.lst
+       BTC_Ecm.lst
+       BTC_Emm.lst
+       BTC_Hardcoded.lst
+       BTC_RamVar.lst
+       BTC_ReadIccid.lst
+       BTC_ReadProduct.lst
+       BTC_Utilities.lst
+       BTC_VerifyAdm7.lst
+       CHF.lst
+       CHF_core.lst
+       COM_T1Protocol.lst
+       COM_T1RamVar.lst
+       CPM_CmdHdlerUtils.lst
+       CPM_CommandHandler.lst
+       CPM_Initialization.lst
+       CPM_RamVar.lst
+       CPM_UserRoutine.lst
+       CPU_Basics.lst
+       CPU_Secu_RamVar.lst
+       CPU_Secure.lst
+       CRY_Al.lst
+       CRY_Cbc.lst
+       CRY_Cbc_Idea.lst
+       CRY_Crc32.lst
+       CRY_Mdc.lst
+       CRY_Rsa_Keys_Decompression.lst
+       Crc_Checksum.lst
+       CryptoSC16.lst
+       DBG_CommandHandler.lst
+       DBG_Commands.lst
+       DBG_E2pConst.lst
+       DB_DataModel.lst
+       DB_DataPerso_Aladin.lst
+       DB_Dnasql.lst
+       DB_Manager.lst
+       DB_Ram.lst
+       DB_Transaction.lst
+       DB_Update.lst
+       DGH_Initialization.lst
+       DVR_RNG.lst
+       Drv_Dispatcher.lst
+       Drv_IO_ATR.lst
+       Drv_IO_UART.lst
+       ECM_AccessEquation.lst
+       ECM_CaidFunction.lst
+       ECM_CameleonPurchase.lst
+       ECM_CheckPreliminary.lst
+       ECM_E2pConst.lst
+       ECM_OptionalParam.lst
+       ECM_ProcessRightUpdate.lst
+       ECM_RamVar.lst
+       ECM_SecurityFormat.lst
+       ECM_SegmentFunction.lst
+       ECM_SendResponse.lst
+       ECM_Treatment.lst
+       ECM_dnasql.lst
+       EMM_Cmd01.lst
+       EMM_Cmd02.lst
+       EMM_Cmd03.lst
+       EMM_Cmd04.lst
+       EMM_Cmd11.lst
+       EMM_Cmd12.lst
+       EMM_Cmd14.lst
+       EMM_Cmd15.lst
+       EMM_Cmd17.lst
+       EMM_Cmd1C.lst
+       EMM_Cmd1D.lst
+       EMM_Cmd20.lst
+       EMM_Cmd24.lst
+       EMM_Cmd25.lst
+       EMM_Cmd26.lst
+       EMM_Cmd2C.lst
+       EMM_Cmd30.lst
+       EMM_Cmd31.lst
+       EMM_Cmd34.lst
+       EMM_Cmd35.lst
+       EMM_Cmd38.lst
+       EMM_Cmd3D.lst
+       EMM_Cmd50.lst
+       EMM_Cmd51.lst
+       EMM_Cmd54.lst
+       EMM_Cmd56.lst
+       EMM_Cmd57.lst
+       EMM_Cmd5A.lst
+       EMM_Cmd5C.lst
+       EMM_Cmd80_BF.lst
+       EMM_CmdHandler.lst
+       EMM_E2pConst.lst
+       EMM_Functions.lst
+       EMM_RamVar.lst
+       EMM_SecurityFormat.lst
+       EMM_Treatment.lst
+       EXM_Dispatcher.lst
+       EXM_RamVar.lst
+       Eeprom_sup_data.lst
+       Eeprom_user_data.lst
+       Flash_sup_data.lst
+       InterfaceKey.lst
+       MLN_ATR.lst
+       MLN_CommandHandler.lst
+       MLN_Commands.lst
+       MLN_Commands_EXM.lst
+       MLN_Commands_FC.lst
+       MLN_Commands_GR.lst
+       MLN_Commands_PC.lst
+       MLN_Commands_SK.lst
+       MLN_Commands_SPC.lst
+       MLN_RamE2p_Commands.lst
+       MLN_RamE2p_GR.lst
+       MLN_RamE2p_PC.lst
+       MLN_RamE2p_SK.lst
+       MLN_RamE2p_SPC.lst
+       MLN_Utilities.lst
+       PatchWork.lst
+       SB.lst
+       SC16_RNG.lst
+       SKI_Dispatcher.lst
+       SK_SecuUtilities.lst
+       SecureRoutine.lst
+       SessionKey.lst
+       absolute_track_value_utilities.lst
+       configuration.lst
+       crypto_utilities.lst
+       des.lst
+       drv_crc16.lst
+       drv_nvmxp_SK.lst
+       drv_timer_SK.lst
+       ecc_low_level.lst
+       globalvar.lst
+       idea.lst
+       m_ecm_g.lst
+       mdc2_des.lst
+       patch_commit_sk.lst
+       reset.lst
+       sc16_core_driver.lst
+       sc16_low_level.lst
+       sha256.lst
+      }
+      OBJ=OBJ {
+       AEM_Crypto.r90
+       AEM_E2pConst.r90
+       AEM_KeyManager.r90
+       AEM_Manager.r90
+       AEM_RamVar.r90
+       AEM_Translator.r90
+       AEM_Unwrapper.r90
+       AEM_Utilities.r90
+       ALD_ATR.r90
+       ALD_CommandHandler.r90
+       ALD_Command_ECM.r90
+       ALD_Command_EMM.r90
+       ALD_Command_GST.r90
+       ALD_Command_GTM.r90
+       ALD_Command_GTV.r90
+       ALD_Command_GUA.r90
+       ALD_Command_SK.r90
+       ALD_Commands.r90
+       ALD_E2pConst.r90
+       ALD_RamVar.r90
+       ALD_Utilities.r90
+       AL_DBUtilities.r90
+       AL_DateManager.r90
+       AL_DateMgr_E2pVar.r90
+       AL_DidManagement.r90
+       AL_E2pConst.r90
+       AL_InterfaceCrypto.r90
+       AL_KeyManagement.r90
+       AL_MessageDecrypt.r90
+       AL_PinCodeUtilities.r90
+       AL_RamVar.r90
+       AL_RivetCheck.r90
+       AL_Utilities.r90
+       ATR.r90
+       BTC_ATR.r90
+       BTC_Chv.r90
+       BTC_Crypto.r90
+       BTC_Dispatcher.r90
+       BTC_E2pConst.r90
+       BTC_Ecm.r90
+       BTC_Emm.r90
+       BTC_Hardcoded.r90
+       BTC_RamVar.r90
+       BTC_ReadIccid.r90
+       BTC_ReadProduct.r90
+       BTC_Utilities.r90
+       BTC_VerifyAdm7.r90
+       CHF.r90
+       CHF_core.r90
+       COM_T1Protocol.r90
+       COM_T1RamVar.r90
+       CPM_CmdHdlerUtils.r90
+       CPM_CommandHandler.r90
+       CPM_Initialization.r90
+       CPM_RamVar.r90
+       CPM_UserRoutine.r90
+       CPU_Basics.r90
+       CPU_Secu_RamVar.r90
+       CPU_Secure.r90
+       CRY_Al.r90
+       CRY_Cbc.r90
+       CRY_Cbc_Idea.r90
+       CRY_Crc32.r90
+       CRY_Mdc.r90
+       CRY_Rsa_Keys_Decompression.r90
+       Crc_Checksum.r90
+       CryptoSC16.r90
+       DBG_CommandHandler.r90
+       DBG_Commands.r90
+       DBG_E2pConst.r90
+       DB_DataModel.r90
+       DB_DataPerso_Aladin.r90
+       DB_Dnasql.r90
+       DB_Manager.r90
+       DB_Ram.r90
+       DB_Transaction.r90
+       DB_Update.r90
+       DGH_Initialization.r90
+       DVR_RNG.r90
+       Drv_Dispatcher.r90
+       Drv_IO_ATR.r90
+       Drv_IO_UART.r90
+       ECM_AccessEquation.r90
+       ECM_CaidFunction.r90
+       ECM_CameleonPurchase.r90
+       ECM_CheckPreliminary.r90
+       ECM_E2pConst.r90
+       ECM_OptionalParam.r90
+       ECM_ProcessRightUpdate.r90
+       ECM_RamVar.r90
+       ECM_SecurityFormat.r90
+       ECM_SegmentFunction.r90
+       ECM_SendResponse.r90
+       ECM_Treatment.r90
+       ECM_dnasql.r90
+       EMM_Cmd01.r90
+       EMM_Cmd02.r90
+       EMM_Cmd03.r90
+       EMM_Cmd04.r90
+       EMM_Cmd11.r90
+       EMM_Cmd12.r90
+       EMM_Cmd14.r90
+       EMM_Cmd15.r90
+       EMM_Cmd17.r90
+       EMM_Cmd1C.r90
+       EMM_Cmd1D.r90
+       EMM_Cmd20.r90
+       EMM_Cmd24.r90
+       EMM_Cmd25.r90
+       EMM_Cmd26.r90
+       EMM_Cmd2C.r90
+       EMM_Cmd30.r90
+       EMM_Cmd31.r90
+       EMM_Cmd34.r90
+       EMM_Cmd35.r90
+       EMM_Cmd38.r90
+       EMM_Cmd3D.r90
+       EMM_Cmd50.r90
+       EMM_Cmd51.r90
+       EMM_Cmd54.r90
+       EMM_Cmd56.r90
+       EMM_Cmd57.r90
+       EMM_Cmd5A.r90
+       EMM_Cmd5C.r90
+       EMM_Cmd80_BF.r90
+       EMM_CmdHandler.r90
+       EMM_E2pConst.r90
+       EMM_Functions.r90
+       EMM_RamVar.r90
+       EMM_SecurityFormat.r90
+       EMM_Treatment.r90
+       EXM_Dispatcher.r90
+       EXM_RamVar.r90
+       Eeprom_sup_data.r90
+       Eeprom_user_data.r90
+       Flash_sup_data.r90
+       InterfaceKey.r90
+       MLN_ATR.r90
+       MLN_CommandHandler.r90
+       MLN_Commands.r90
+       MLN_Commands_EXM.r90
+       MLN_Commands_FC.r90
+       MLN_Commands_GR.r90
+       MLN_Commands_PC.r90
+       MLN_Commands_SK.r90
+       MLN_Commands_SPC.r90
+       MLN_RamE2p_Commands.r90
+       MLN_RamE2p_GR.r90
+       MLN_RamE2p_PC.r90
+       MLN_RamE2p_SK.r90
+       MLN_RamE2p_SPC.r90
+       MLN_Utilities.r90
+       PatchWork.r90
+       SB.r90
+       SC16_RNG.r90
+       SKI_Dispatcher.r90
+       SK_SecuUtilities.r90
+       SecureRoutine.r90
+       SessionKey.r90
+       absolute_track_value_utilities.r90
+       configuration.r90
+       crypto_utilities.r90
+       des.r90
+       drv_crc16.r90
+       drv_nvmxp_SK.r90
+       drv_timer_SK.r90
+       ecc_low_level.r90
+       globalvar.r90
+       idea.r90
+       m_ecm_g.r90
+       mdc2_des.r90
+       patch_commit_sk.r90
+       reset.r90
+       sc16_core_driver.r90
+       sc16_low_level.r90
+       sha256.r90
+      }
+     }
+    }
+    datatest=datatest {
+     D_A2_TNT_AT90SC72144CT_CARD.mac
+     UA_000098832384.s19
+     UA_000098832384_Macem.s19
+    }
+   }
+   BERLIN_DBG_T14=BERLIN_DBG_T14 {
+    About.html
+    LaunchCspy.sh
+    Makefile
+    Modules.ini
+    Src2Prj.sh
+    asm.cfg
+    cc.cfg
+    lnk.cfg
+    lnk.xcl
+    RamSegments.h
+    ABOUT=ABOUT {
+     BerlinDbgT14.dxt
+    }
+    datatest=datatest {
+     D_A2_TNT_AT90SC72144CT_CARD.mac
+     UA_000098832384.s19
+     UA_000098832384_Macem.s19
+    }
+   }
+   BERLIN_DBG_T14_SIMU=BERLIN_DBG_T14_SIMU {
+    About.html
+    BERLIN_DBG_T14_SIMU.makelist.ini
+    LaunchCspy.sh
+    Makefile
+    Modules.ini
+    Src2Prj.sh
+    asm.cfg
+    cc.cfg
+    lnk.cfg
+    lnk.xcl
+    RamSegments.h
+    ABOUT=ABOUT {
+     BerlinDbgT14Simu.dxt
+    }
+    SIMUFILES=SIMUFILES {
+     AT90SC3696CT.dfc
+     BERLIN_DBG_T14_SIMU.sco
+     BERLIN_DBG_T14_SIMU_Eeprom.S19
+     LaunchSimu.sh
+    }
+    datatest=datatest {
+     D_A2_TNT_AT90SC3696CT_CARD.mac
+     UA_000098832384.s19
+     UA_000098832384_Macem.s19
+    }
+   }
+  }
+ }
+ VALID=VALID {
+  About.html
+  BuildDoc.sh
+  BuildReport.sh
+  CTags.lst
+  Filter.txt
+  Python2Prj.sh
+  RunTests.sh
+  RunTestsGui.sh
+  Static.sh
+  Validation-ReferenceManual-0.2.chm
+  WinPdb_Berlin.bat
+  WinPdb_Berlin.sh
+  doxyfile.log
+  runReport.bat
+  runSpecificTests.sh
+  runTests.bat
+  validPython.prj
+  Filter.txt.bak
+  ABOUT=ABOUT {
+   Valid.dxt
+  }
+  CONFIG=CONFIG {
+   About.html
+   ABOUT=ABOUT {
+    Config.dxt
+   }
+   BERLIN=BERLIN {
+    BERLIN.main.ini
+    DBG_NO_RIVET=DBG_NO_RIVET {
+     DBG_NO_RIVET.ini
+    }
+   }
+   BERLIN_CP=BERLIN_CP {
+    BERLIN_CP.main.ini
+    ARIEL_DBG=ARIEL_DBG {
+     ARIEL_DBG.ini
+    }
+    ARIEL_V1_1_7_8_20=ARIEL_V1_1_7_8_20 {
+     ARIEL_V1_1_7_8_20.ini
+    }
+    BERLIN_DBG=BERLIN_DBG {
+     BERLIN_DBG.ini
+    }
+   }
+   PROTOTYPE=PROTOTYPE {
+    PROTOTYPE.main.ini
+    PROTOV1=PROTOV1 {
+     PROTOV1.ini
+    }
+    PROTOV2=PROTOV2 {
+     PROTOV2.ini
+     PROTOV2.prj
+    }
+    PROTOV2A01=PROTOV2A01 {
+     PROTOV2A01.ini
+    }
+    PROTOV2A02=PROTOV2A02 {
+     PROTOV2A02.ini
+    }
+    PROTOV2K01=PROTOV2K01 {
+     PROTOV2K01.ini
+    }
+    PROTOV2K02=PROTOV2K02 {
+     PROTOV2K02.ini
+    }
+    PROTOV2P01=PROTOV2P01 {
+     PROTOV2P01.ini
+    }
+    PROTOV2P02=PROTOV2P02 {
+     PROTOV2P02.ini
+    }
+    PROTOV2S01=PROTOV2S01 {
+     PROTOV2S01.ini
+    }
+    PROTOV2S02=PROTOV2S02 {
+     PROTOV2S02.ini
+    }
+   }
+  }
+  LOCAL=LOCAL {
+   Config.ini
+   EasyReader.ini
+   Valid.chm
+   atvemulator.ini
+   BERLIN=BERLIN {
+    DBG_NO_RIVET=DBG_NO_RIVET {
+     EMULATOR=EMULATOR {
+      journal.jrl
+      CRITERIA=CRITERIA {
+       dynamic
+      }
+      vxt=vxt {
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_01.vxt
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_02.vxt
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_03.vxt
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_nom_01.vxt
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_01.vxt
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_02.vxt
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_03.vxt
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_nom_01.vxt
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_01.vxt
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_02.vxt
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_03.vxt
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_nom_01.vxt
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_01.vxt
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_02.vxt
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_03.vxt
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_nom_01.vxt
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_01.vxt
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_02.vxt
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_03.vxt
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_04.vxt
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_01.vxt
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_02.vxt
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_03.vxt
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_nom_01.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_01.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_02.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_03.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_04.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_nom_01.vxt
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_01.vxt
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_02.vxt
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_03.vxt
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_nom_01.vxt
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_01.vxt
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_02.vxt
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_03.vxt
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_nom_01.vxt
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_01.vxt
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_02.vxt
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_03.vxt
+       betacrypt.integtest.readstu.ReadStuTestCase.test_nom_01.vxt
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_01.vxt
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_02.vxt
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_03.vxt
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_nom_01.vxt
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_01.vxt
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_02.vxt
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_03.vxt
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_nom_01.vxt
+      }
+      xml=xml {
+       betacrypt.autotest.layer.LayerTest.test_ReadProductTestCase.xml
+       betacrypt.autotest.layer.LayerTest.test_ReadSectorTestCase.xml
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_04TestCase.xml
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_04TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_01TestCase.xml
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readstu.ReadStuTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_nom_01TestCase.xml
+      }
+     }
+    }
+   }
+   BERLIN_CP=BERLIN_CP {
+    BERLIN_DBG=BERLIN_DBG {
+     EMU=EMU {
+      journal.jrl
+      CRITERIA=CRITERIA {
+       dynamic
+      }
+      vxt=vxt {
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_01.vxt
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_02.vxt
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_03.vxt
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_nom_01.vxt
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_01.vxt
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_02.vxt
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_03.vxt
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_nom_01.vxt
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_01.vxt
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_02.vxt
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_03.vxt
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_nom_01.vxt
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_01.vxt
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_02.vxt
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_03.vxt
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_nom_01.vxt
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_01.vxt
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_02.vxt
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_03.vxt
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_04.vxt
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_01.vxt
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_02.vxt
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_03.vxt
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_nom_01.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_01.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_02.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_03.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_04.vxt
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_nom_01.vxt
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_01.vxt
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_02.vxt
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_03.vxt
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_nom_01.vxt
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_01.vxt
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_02.vxt
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_03.vxt
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_nom_01.vxt
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_01.vxt
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_02.vxt
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_03.vxt
+       betacrypt.integtest.readstu.ReadStuTestCase.test_nom_01.vxt
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_01.vxt
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_02.vxt
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_03.vxt
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_nom_01.vxt
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_01.vxt
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_02.vxt
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_03.vxt
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_nom_01.vxt
+      }
+      xml=xml {
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readfeedback.ReadFeedbackTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readgeneral.ReadGeneralTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readglobal.ReadGlobalTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readiccid.ReadIccidTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readippv.ReadIppvTestCase.test_err_04TestCase.xml
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readmacrovision.ReadMacrovisionTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_err_04TestCase.xml
+       betacrypt.integtest.readsecret.ReadSecretTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readsector.ReadSectorTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readservicekey.ReadServiceKeyTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readstu.ReadStuTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readstu.ReadStuTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.readunique.ReadUniqueTestCase.test_nom_01TestCase.xml
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_01TestCase.xml
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_02TestCase.xml
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_err_03TestCase.xml
+       betacrypt.integtest.updatestu.UpdateStuTestCase.test_nom_01TestCase.xml
+      }
+     }
+    }
+   }
+  }
+  RUNTIME=RUNTIME {
+   About.html
+   EasyTest-ReferenceManual.chm
+   EasyTest-UserManual.chm
+   runall.py
+   ABOUT=ABOUT {
+    Runtime.dxt
+   }
+   corepython=corepython {
+    __init__.py
+    crypto=crypto {
+     __init__.py
+     cryptolib.py
+     cryptoschemes.py
+     cryptotools.py
+     paddingtools.py
+     rsaschemes.py
+     rsatools.py
+     test=test {
+     }
+    }
+    system=system {
+     __init__.py
+     atdebugger.py
+     ateasydebugger.py
+     atvaut.py
+     atvemulator.py
+     connectionpool.py
+     debugger.py
+     scer.py
+     scpcsc.py
+     smartcard.py
+     xfwj2comdebugger.py
+     test=test {
+     }
+    }
+    tools=tools {
+     __init__.py
+     binaryfiles.py
+     config.py
+     deprecation.py
+     hexbuf.py
+     hexnum.py
+     initools.py
+     threadutils.py
+     tlv.py
+     typecheck.py
+     test=test {
+     }
+    }
+   }
+   easytest=easytest {
+    __init__.py
+    card.py
+    consts.py
+    context.py
+    core.py
+    debugger.py
+    easyui.py
+    extensions.py
+    failedui.py
+    systems.py
+    testmanager.py
+    textui.py
+    xmlui.py
+    data=data {
+     __init__.py
+     config.template
+    }
+    test=test {
+    }
+    tools=tools {
+     __init__.py
+     pylint2dxt.py
+     reportbuilder.py
+     setuppcsc.pyw
+     static.py
+    }
+    ui=ui {
+     __init__.py
+     base.py
+     aui=aui {
+      __init__.py
+      configuration.py
+      testmanager.py
+      ctrl=ctrl {
+       __init__.py
+       progressctrl.py
+       pytextctrl.py
+       sizereportctrl.py
+       treectrl.py
+       vxttextctrl.py
+      }
+      dialogs=dialogs {
+       __init__.py
+       aboutdlg.py
+      }
+      events=events {
+       __init__.py
+       events.py
+      }
+      frame=frame {
+       __init__.py
+       configpanel.py
+       filteredtreepanel.py
+       mainframe.py
+       progresspanel.py
+       vxtspypanel.py
+      }
+      media=media {
+       __init__.py
+       checkbox_auto.png
+       checkbox_checked.png
+       checkbox_unchecked.png
+       icon_bug.png
+       icon_config.png
+       icon_config_selected.png
+       icon_edsi.png
+       icon_error.png
+       icon_failure.png
+       icon_generic_selected.png
+       icon_halt.png
+       icon_notfound.png
+       icon_pause.png
+       icon_run.png
+       icon_start_all.png
+       icon_start_current.png
+       icon_start_resume.png
+       icon_stop.png
+       icon_success.png
+       icon_testtree.png
+       icon_testtree_selected.png
+       icon_unknown.png
+       icon_vxtspy.png
+       icon_vxtspy_selected.png
+       logo.png
+       logo_large.png
+      }
+      model=model {
+       __init__.py
+       datamodel.py
+       hierarchy.py
+       userrun.py
+      }
+     }
+     console=console {
+      __init__.py
+     }
+    }
+   }
+  }
+  SOURCE=SOURCE {
+   About.html
+   features.py
+   testrunner.py
+   ABOUT=ABOUT {
+    Source.dxt
+   }
+   aem=aem {
+    __init__.py
+    testrunner.py
+    autotest=autotest {
+     __init__.py
+     buildecm.py
+     crypto.py
+     testrunner.py
+    }
+    base=base {
+     __init__.py
+     basetest.py
+     consts.py
+     crypto.py
+     ecm.py
+     features.py
+     layerh.py
+     layerl.py
+     layert.py
+     util.py
+    }
+    criteria=criteria {
+     vp_aladinecmmanager.py
+     VP_AladinEcmManager.txt
+     __init__.py
+    }
+    integtest=integtest {
+     __init__.py
+     testrunner.py
+     aladin=aladin {
+      __init__.py
+      sampleTest.py
+      testrunner.py
+     }
+    }
+    unittest=unittest {
+     __init__.py
+    }
+   }
+   aladin=aladin {
+    __init__.py
+    testrunner.py
+    autotest=autotest {
+     __init__.py
+     layer.py
+     testrunner.py
+    }
+    base=base {
+     __init__.py
+     basetest.py
+     consts.py
+     decorators.py
+     features.py
+     layerh.py
+     layerl.py
+     layerp.py
+     layers.py
+     layert.py
+     persoinit.py
+     tablevalue.py
+     util.py
+    }
+    criteria=criteria {
+     VP_Berlin.txt
+     VP_CCM.txt
+     __init__.py
+     vp_DataString.txt
+     vp_PINCode.txt
+     vp_aladin.py
+     vp_Aladin.txt
+     vp_berlin.py
+     vp_ccm.py
+     vp_datastring.py
+     vp_hashsigning.py
+     vp_hashsigning.txt
+     vp_pincode.py
+    }
+    integtest=integtest {
+     __init__.py
+     testrunner.py
+     berlin=berlin {
+     }
+     ccm=ccm {
+      __init__.py
+      testrunner.py
+     }
+     common=common {
+      __init__.py
+      ecm.py
+      emm.py
+      getdbstatus.py
+      geticcalea.py
+      geticcstatus.py
+      getproctime.py
+      getscdatetime.py
+      gettablevalue.py
+      getua.py
+      giveirdalea.py
+      testrunner.py
+     }
+     datastring=datastring {
+      __init__.py
+      testrunner.py
+     }
+     german=german {
+      __init__.py
+      testrunner.py
+     }
+     hashsigning=hashsigning {
+      __init__.py
+      testrunner.py
+     }
+     pincode=pincode {
+      __init__.py
+      testrunner.py
+     }
+     standard=standard {
+      __init__.py
+      testrunner.py
+     }
+    }
+   }
+   apdudebug=apdudebug {
+    __init__.py
+    base=base {
+     __init__.py
+     consts.py
+     debugger.py
+     layerh.py
+     layerl.py
+    }
+   }
+   berlin=berlin {
+    __init__.py
+    base=base {
+     __init__.py
+    }
+    criteria=criteria {
+     __init__.py
+    }
+   }
+   betacrypt=betacrypt {
+    __init__.py
+    testrunner.py
+    autotest=autotest {
+     __init__.py
+     cryptotest.py
+     layer.py
+     testrunner.py
+    }
+    base=base {
+     __init__.py
+     basetest.py
+     consts.py
+     crypto.py
+     features.py
+     layerh.py
+     layerl.py
+     layers.py
+     layert.py
+     tools.py
+    }
+    criteria=criteria {
+     __init__.py
+     vp_chameleonbetacrypt.py
+    }
+    integtest=integtest {
+     __init__.py
+     readfeedback.py
+     readgeneral.py
+     readglobal.py
+     readiccid.py
+     readippv.py
+     readmacrovision.py
+     readsecret.py
+     readsector.py
+     readservicekey.py
+     readstu.py
+     readunique.py
+     testrunner.py
+     updatestu.py
+     verifyadm7.py
+    }
+   }
+   mask=mask {
+    __init__.py
+    base=base {
+     __init__.py
+     basetest.py
+     features.py
+     layerh.py
+     layerl.py
+     layerp.py
+     layert.py
+     merlindecorators.py
+     watchpoint.py
+    }
+    criteria=criteria {
+     __init__.py
+    }
+   }
+   mediaguard=mediaguard {
+    __init__.py
+    base=base {
+     __init__.py
+     basetest.py
+     consts.py
+     decorators.py
+     features.py
+     persoinit.py
+    }
+    criteria=criteria {
+     __init__.py
+    }
+    integtest=integtest {
+     __init__.py
+    }
+   }
+   merlin=merlin {
+    __init__.py
+    testrunner.py
+    autotest=autotest {
+     __init__.py
+     layer.py
+     testrunner.py
+    }
+    base=base {
+     __init__.py
+     basetest.py
+     consts.py
+     cryptoschemesnagra.py
+     features.py
+     getrecord.py
+     layerh.py
+     layerl.py
+     layerp.py
+     layers.py
+     layert.py
+     persoinit.py
+    }
+    criteria=criteria {
+     __init__.py
+     vp_merlinunittest.py
+    }
+    integtest=integtest {
+     __init__.py
+     apduhandler.py
+     fastercom.py
+     pincode.py
+     setparentalctrl.py
+     testrunner.py
+     getrecord=getrecord {
+      __init__.py
+      fltrecord.py
+      length.py
+      main.py
+      rectype.py
+      testrunner.py
+     }
+     pairing=pairing {
+      __init__.py
+      initsessionkey.py
+      securechannel.py
+      strongpairing.py
+      testrunner.py
+     }
+    }
+   }
+   merlincore=merlincore {
+    __init__.py
+    testrunner.py
+    base=base {
+     __init__.py
+     features.py
+    }
+    ccm=ccm {
+     __init__.py
+     base=base {
+      __init__.py
+      consts.py
+      util.py
+     }
+     criteria=criteria {
+      __init__.py
+     }
+    }
+    database=database {
+     __init__.py
+     testrunner.py
+     base=base {
+      __init__.py
+      basetest.py
+      consts.py
+      dbprocessor.py
+      features.py
+      persoinit.py
+      util.py
+     }
+     criteria=criteria {
+      __init__.py
+      vp_database.py
+      vp_database.txt
+     }
+     unittest=unittest {
+      __init__.py
+      cleanup.py
+      committransactions.py
+      create.py
+      createrec.py
+      databaseadr.py
+      databasetestcase.py
+      dbprocessortestcase.py
+      delete.py
+      deleterec.py
+      engine.py
+      eraserec.py
+      multidatabase.py
+      searchnext.py
+      selectdbactive.py
+      testrunner.py
+      update.py
+      updaterec.py
+     }
+    }
+    dnasql=dnasql {
+     __init__.py
+     testrunner.py
+     base=base {
+      __init__.py
+      basetest.py
+      consts.py
+      features.py
+      persoinit.py
+      util.py
+     }
+     criteria=criteria {
+      __init__.py
+      vp_dnasql.py
+      vp_dnasql.txt
+     }
+     unittest=unittest {
+      __init__.py
+      cancel.py
+      comparison.py
+      delete.py
+      getfieldpointer.py
+      initrecstructure.py
+      insert.py
+      logical.py
+      processextract.py
+      processinsert.py
+      processquery.py
+      processremove.py
+      processupdate.py
+      processwherepart.py
+      qid.py
+      reactivate.py
+      recid.py
+      remove.py
+      select.py
+      stack.py
+      suspend.py
+      testrunner.py
+      update.py
+      userconditional.py
+     }
+    }
+    ecm=ecm {
+     __init__.py
+     base=base {
+      __init__.py
+      cae.py
+      consts.py
+      util.py
+     }
+     criteria=criteria {
+      __init__.py
+     }
+    }
+    emm=emm {
+     __init__.py
+     base=base {
+      __init__.py
+      consts.py
+      util.py
+     }
+     criteria=criteria {
+      __init__.py
+     }
+    }
+    exm=exm {
+     __init__.py
+     base=base {
+      __init__.py
+      features.py
+      util.py
+     }
+     criteria=criteria {
+      __init__.py
+     }
+    }
+    hashsigning=hashsigning {
+     __init__.py
+     base=base {
+      __init__.py
+      consts.py
+      features.py
+      util.py
+     }
+     criteria=criteria {
+      __init__.py
+     }
+    }
+   }
+   perso=perso {
+    __init__.py
+    base=base {
+     __init__.py
+     features.py
+     persoinit.py
+     persoprocessor.py
+    }
+    datamodel=datamodel {
+     __init__.py
+     datetime.py
+     didtable.py
+     fields.py
+     metadata.py
+     monetary.py
+     recordconsts.py
+     records.py
+    }
+    key=key {
+     __init__.py
+     consts.py
+     keyfile.py
+     keyprovider.py
+    }
+   }
+   pim=pim {
+    __init__.py
+    base=base {
+     __init__.py
+     consts.py
+     layerh.py
+     layerl.py
+    }
+   }
+   protocol=protocol {
+    __init__.py
+    testrunner.py
+    base=base {
+     __init__.py
+     apdus.py
+     basetest.py
+     consts.py
+     features.py
+    }
+    criteria=criteria {
+     VP T14 Protocol.txt
+     vp_protocol_t14_betacrypt.py
+     VP_Protocol_T14_Betacrypt.txt
+     __init__.py
+     vp_t14_protocol.py
+    }
+    integtest=integtest {
+     __init__.py
+     apdu.py
+     atr.py
+     byte.py
+     testrunner.py
+     tpdu.py
+    }
+   }
+   prototype=prototype {
+    __init__.py
+    testrunner.py
+    base=base {
+     __init__.py
+     basetest.py
+     carddecorator.py
+     consts.py
+     features.py
+    }
+    criteria=criteria {
+     VP T14 Prototype.doc
+     VP T14 Prototype.txt
+     __init__.py
+     criteria.py
+     vp_t14_prototype.py
+    }
+    integtest=integtest {
+     __init__.py
+     testrunner.py
+     apdu=apdu {
+      __init__.py
+      apdu.py
+      testrunner.py
+     }
+     serial=serial {
+      __init__.py
+      serial.py
+      testrunner.py
+     }
+     tpdu=tpdu {
+      __init__.py
+      testrunner.py
+      tpdu.py
+     }
+    }
+    unittest=unittest {
+     __init__.py
+     testrunner.py
+    }
+   }
+  }
+ }
+ WORKING=WORKING {
+  BERLIN_CP=BERLIN_CP {
+   BERLIN_DBG=BERLIN_DBG {
+    API=API {
+    }
+    EMU=EMU {
+     BERLIN_DBG.adr
+     BERLIN_DBG.d90
+     BERLIN_DBG.map
+     settings=settings {
+      BERLIN_DBG.d90.dbgdt
+      BERLIN_DBG.dni
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,57 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +915 T:\Projets\Berlin\DEV\TOOLS\COMMON\PY\easydev\src2dep\moddepgen.py
+badd +0 T:\Projets\Berlin\DEV\TOOLS\COMMON\PY\easydev\src2dep\src2depcj2.py
+badd +1 T:\Projets\Quito\trk\DEV\OS_SAMPLE\VARIANT\M8863\output.mak
+badd +1 T:\Projets\Quito\trk\DEV\OS_SAMPLE\VARIANT\M8863\DEBUG\SIMU\Modules.dep
+args T:\Projets\Quito\trk\DEV\OS_SAMPLE\VARIANT\M8863\DEBUG\SIMU\Modules.dep
+edit T:\Projets\Quito\trk\DEV\OS_SAMPLE\VARIANT\M8863\output.mak
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+wincmd =
+argglobal
+let s:l = 395 - ((1 * winheight(0) + 24) / 48)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+395
+normal! 026l
+wincmd w
+argglobal
+edit T:\Projets\Quito\trk\DEV\OS_SAMPLE\VARIANT\M8863\DEBUG\SIMU\Modules.dep
+let s:l = 954 - ((7 * winheight(0) + 9) / 18)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+954
+normal! 034l
+wincmd w
+wincmd =
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=80 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . s:sx
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

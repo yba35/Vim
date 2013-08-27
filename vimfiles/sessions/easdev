@@ -1,0 +1,57 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd V:\CAS3\DEV\DNASP501_PIM\VARIANT\MC501M_Ideal
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +72 Modules.ini
+badd +33 T:\Projets\Berlin\DEV\BERLIN\VARIANT\BERLIN\Modules.ini
+badd +19 Makefile
+badd +0 T:\Projets\Berlin\DEV\BERLIN\VARIANT\BERLIN\Makefile
+args T:\Projets\Berlin\DEV\BERLIN\VARIANT\BERLIN\Makefile
+edit T:\Projets\Berlin\DEV\BERLIN\VARIANT\BERLIN\Makefile
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+wincmd =
+argglobal
+let s:l = 193 - ((0 * winheight(0) + 18) / 36)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+193
+normal! 0
+wincmd w
+argglobal
+edit Modules.ini
+let s:l = 534 - ((0 * winheight(0) + 15) / 31)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+534
+normal! 031l
+wincmd w
+wincmd =
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=80 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . s:sx
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

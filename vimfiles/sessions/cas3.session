@@ -1,0 +1,77 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd V:\CAS3\DEV
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +41 TOOLS\COMMON\MAK\CJ2\NAGRA\Sdk-Cj2.mak
+badd +39 DNASP501_PIM\SOURCE\SrvCommonData\SrvCommonData.h
+badd +47 DNASP501_PIM\SOURCE\PimSpecific\Eme\SrvIrdData\SrvIrdData.h
+badd +179 DNASP501_PIM\VARIANT\EME\Common_layout.sle
+badd +47 \ADMIN\DEV\BACKUP\SOURCE\backup.py
+badd +322 DNASP501_PIM\VARIANT\EME\RuntimeOs_layout.sle
+badd +823 DNASP501_PIM\VARIANT\EME\DEBUG\SIMU\BIN\P_Common.tmp.map
+badd +248 DNASP501_PIM\SOURCE\SrvCryptoLib\SrvCryptoLib_PIM.c
+badd +37 DNASP501_PIM\SOURCE\SrvCommonData\SrvCommonData.c
+badd +74 DNASP501_PIM\SOURCE\PimSpecific\Common\SrvInitContextRAM\SrvInitContextRAM.c
+badd +176 DNASP501_PIM\SOURCE\SrvResponse\SrvResponse.c
+badd +160 DNASP501_PIM\SOURCE\PimSpecific\Common\SrvCommand\PIM_SrvCommand.c
+badd +267 DNASP501_PIM\SOURCE\SrvCommand\SrvCommand.c
+badd +16 \temp\DNASP501\VARIANT\DSHN01_IDEAL\DEBUG\SIMU\BIN\P_Common.map
+badd +43 DNASP501_PIM\VARIANT\EME\Default_sections_dshN01.inc
+badd +1 DNASP501_PIM\VARIANT\EME\DEBUG\SIMU\BIN\P_Common.map
+badd +1 DNASP501_PIM\SOURCE\PimSpecific\Common\SrvCommand\PIM_SrvCommand.h
+badd +156 DNASP501_PIM\VARIANT\EME\Packages.ini
+badd +2036 DNASP501_PIM\SOURCE\SkPatchOs\SkPatchOs.c
+badd +144 DNASP501_PIM\SOURCE\SkSignatureManager\SkSignatureManager.c
+badd +254 DNASP501_PIM\SOURCE\SrvCryptoLib\SrvCryptoLib.c
+badd +179 DNASP501_PIM\SOURCE\SkSignatureManager\SkSignatureManager.h
+badd +0 DNASP501_PIM\SOURCE\AppDnasqlEngine\scDataModel.h
+args DNASP501_PIM\SOURCE\AppDnasqlEngine\scDataModel.h
+edit DNASP501_PIM\SOURCE\SrvCommonData\SrvCommonData.c
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+wincmd =
+argglobal
+let s:l = 194 - ((5 * winheight(0) + 5) / 11)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+194
+normal! 011l
+wincmd w
+argglobal
+edit DNASP501_PIM\SOURCE\AppDnasqlEngine\scDataModel.h
+let s:l = 281 - ((15 * winheight(0) + 26) / 52)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+281
+normal! 0
+wincmd w
+2wincmd w
+wincmd =
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=80 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . s:sx
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

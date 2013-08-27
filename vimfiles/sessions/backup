@@ -1,0 +1,73 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd C:\Program\ Files\Vim\vim72
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 V:\ADMIN\DEV\BACKUP\SOURCE\test.encode
+badd +517 V:\ADMIN\DEV\BACKUP\SOURCE\backup.py
+badd +574 \backup_test\Backup.sh
+badd +32 V:\ADMIN\DEV\BACKUP\SOURCE\backup.ini
+badd +544 V:\ADMIN\DEV\SAC\SOURCE\sac.py
+badd +11 \temp_w32\backup.log
+badd +29 V:\ADMIN\DEV\BACKUP\SOURCE\backup_reel.ini
+args [BufExplorer]
+edit V:\ADMIN\DEV\BACKUP\SOURCE\backup_reel.ini
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+wincmd _ | wincmd |
+split
+2wincmd k
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+wincmd =
+argglobal
+let s:l = 48 - ((6 * winheight(0) + 8) / 16)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+48
+normal! 033l
+wincmd w
+argglobal
+edit V:\ADMIN\DEV\BACKUP\SOURCE\backup.py
+let s:l = 506 - ((0 * winheight(0) + 0) / 1)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+506
+normal! 0
+wincmd w
+argglobal
+edit \temp_w32\backup.log
+let s:l = 179 - ((13 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+179
+normal! 078l
+wincmd w
+3wincmd w
+wincmd =
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=80 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . s:sx
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

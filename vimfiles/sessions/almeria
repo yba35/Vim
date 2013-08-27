@@ -1,0 +1,103 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 L:\almeria\DEV\almeria.project.vim
+badd +318 L:\almeria\DEV\ALMERIA\VARIANT\ALMERIA_DBG\Modules.ini
+badd +40 L:\almeria\DEV\TOOLS\PROJECT\CODE_GENERATION\FirstPass.mak
+badd +51 L:\almeria\DEV\ALMERIA\VARIANT\ALMERIA_DBG\Modules_PI_MLN.ini
+badd +86 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Database\Src\DB_Ram.s90
+badd +32 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Dnasql\Src\DQL_RamVar.s90
+badd +56 L:\almeria\MISC\template.s90
+badd +448 L:\almeria\DEV\ALMERIA\SOURCE\PI_ALD\ALD\Src\ALD_RamVar.s90
+badd +321 L:\almeria\DEV\ALMERIA\VARIANT\ALMERIA_MG_DBG\Modules.ini
+badd +91 L:\almeria\DEV\TOOLS\PROJECT\SRC2PRJ\Default.prj.sh
+badd +10 L:\almeria\DEV\TOOLS\EASYDEV\ENV\ULTRA_EDIT\ABOUT\UltraEdit.dxt
+badd +1 L:\almeria\DEV\TOOLS\EASYDEV\CHECK_ENV\CheckEnv.sh
+badd +16108 L:\almeria\DEV\RELEASE\ALMERIA\ALMERIA_DBG\SIMU\ALMERIA_DBG.map
+badd +35 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Database\Src\DB_Dnasql.s90
+badd +1045 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\ApplicationLibraries\Src\AL_DBUtilities.s90
+badd +52 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Emm\Src\EMM_Cmd1C.s90
+badd +468 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Emm\Src\EMM_Cmd38.s90
+badd +180 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Database\Src\DB_Update.s90
+badd +46 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Emm\Src\EMM_Cmd25.s90
+badd +373 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Emm\Src\EMM_Cmd26.s90
+badd +26 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Dnasql\Inc\DQL_Const.h
+badd +133 L:\almeria\DEV\ALMERIA\SOURCE\CP_SecureKernel\SecurityAndConfig\Inc\SEC_HardwareAT90SC72144.h
+badd +379 L:\almeria\DEV\ALMERIA\SOURCE\CP_SecureKernel\SecureBoot\Src\SB_EepromUserData.s90
+badd +0 L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Database\Inc\database.h
+badd +0 C:\Program\ Files\Vim\_vimrc
+badd +20 C:\Program\ Files\Vim\_gvimrc
+args C:\Program\ Files\Vim\_gvimrc
+winpos 540 93
+edit C:\Program\ Files\Vim\_gvimrc
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+wincmd _ | wincmd |
+split
+wincmd _ | wincmd |
+split
+3wincmd k
+wincmd w
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+wincmd =
+argglobal
+let s:l = 20 - ((4 * winheight(0) + 4) / 8)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+20
+normal! 02l
+wincmd w
+argglobal
+edit C:\Program\ Files\Vim\_vimrc
+let s:l = 7 - ((4 * winheight(0) + 7) / 14)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+7
+normal! 013l
+wincmd w
+argglobal
+edit L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Dnasql\Inc\DQL_Const.h
+let s:l = 26 - ((2 * winheight(0) + 6) / 13)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+26
+normal! 0
+wincmd w
+argglobal
+edit L:\almeria\DEV\ALMERIA\SOURCE\DAUGHTER\Database\Inc\database.h
+let s:l = 60 - ((0 * winheight(0) + 0) / 1)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+60
+normal! 0
+wincmd w
+wincmd =
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=80 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . s:sx
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
