@@ -2,9 +2,14 @@
 """ GUI look
 """""""""""""""""""""""""""""""""
 syntax on
+if has("unix")
+" do stuff for Unix
+se guifont=Monospace\ 9
+elseif has("win32")
+" do stuff for Windows
 :colo biogoo
 se guifont=Consolas:h10:cANSI
-"se guifont=Monospace\ 9
+endif
 
 " Always show menubar, always show right-hand scrollbar, show left-hand
 " scrollbar only if window is split vertically
