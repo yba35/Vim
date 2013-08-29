@@ -1,0 +1,4 @@
+= Rebuild help tags =
+`:helptags $VIM/vimfiles/doc`
+
+
