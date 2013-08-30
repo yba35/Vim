@@ -238,9 +238,6 @@ let g:proj_flags='imstv' " 'v' means using internal grep
 map <Leader>sh source $VIM/vimfiles/VimSh/vimsh.vim<CR>
 let g:vimsh_sh= 'bash' " shell to run within vimsh
 
-" LookUp
-let g:LookupFile_DisableDefaultMap=0 
-
 " vimExplorer
 let VEConf_singleFileActions = {}
 let VEConf_singleFileHotKeys = {}
@@ -249,6 +246,9 @@ function! VEConf_singleFileActions['test2'](path)
     exe ':tabn'
     exe ':edit ' . a:path 
 endfunction
+
+" vimwiki
+let g:vimwiki_list = [{'path': '$VIM/'}]
 
 
 

@@ -1,0 +1,3 @@
+= How to find a router adress =
+Type a traceroute command; first IP adress is the one of the connected router 
+`> traceroute www.google.fr`

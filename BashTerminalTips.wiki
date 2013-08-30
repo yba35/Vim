@@ -1,0 +1,4 @@
+= Terminal language setting (LANG env variable) =
+To change the terminal language to english
+`> LANG=en_US.UTF-8`
+

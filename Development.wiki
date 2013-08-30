@@ -1,0 +1,11 @@
+= Development =
+
+== Setting the MinGW Debugger in Eclipse ==
+To use a specific MinGW toolchain and debugger in an Eclipse project: 
+
+- Open the used 'Debug' configuration 
+- Behind 'using Standard Create Process Launcher', click on 'Select Other' 
+   - 'Standard Create Process Launcher' should be set 
+- Go to 'Debugger' tab and select 'MinGW gdb' 
+- In 'GDB debugger', set the full path of the MinGW gdb 
+- Uncheck 'Use file path to set bbreakpoints
