@@ -3,3 +3,4 @@
   * [[BashTerminalTips]] -- Bash and Linux/Cygwin terminal tips
   * [[NetworkTips]] -- Newtwork tips
   * [[Development]] -- Development tips
+  * [[EDATools]] -- all tips about EDA tools such as Cadence Incisive/Ctos, etc...
