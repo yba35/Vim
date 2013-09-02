@@ -2,3 +2,10 @@
 To change the terminal language to english
 `> LANG=en_US.UTF-8`
 
+= Convert files recursively using Dos2Unix =
+`> find . -type f -exec dos2unix {} \;`
+
+= Grep - Search for a given string pattern inside a given directory =
+`grep -r -l "foo" .bash/`
+
+

@@ -113,7 +113,7 @@ toggleModes             i               Toggle file sort mode (type/data/file
 newFile                 +f              Create a new file.
 newDirectory            +d              Create a new directory.
 switchPanel             <tab>           Switch to the Tree Panel.
-quitVE                  Q               Quit VimExplorer¡£
+quitVE                  Q               Quit VimExplorerÂ¡Â£
 toggleHidden            H               Toggle show hidden files.(files start
                                         with '.')
 search                  g/              Search.
@@ -156,7 +156,7 @@ tabView                 e               Edit file in new tab.
 openRenamer             ;r              Open Renamer (Note 1)
 startShell              ;c              Start a shell from current path.
 startExplorer           ;e              Start another file
-                                        manager(nautilus,konquer,explorer.exe)¡£
+                                        manager(nautilus,konquer,explorer.exe)Â¡Â£
 
 Visual Mode Hotkeys~
 visualSelect            <space>         Mark files.
@@ -174,7 +174,7 @@ Start VimExplorer.
 >
     VEC
 <
-Close VimExplorer£¬Hotkey |Q| has the same ability.
+Close VimExplorerÂ£Â¬Hotkey |Q| has the same ability.
 
 ==============================================================================
 3.  Directory Browsing                          *VimExplorer-browse*
