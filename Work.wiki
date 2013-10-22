@@ -1,0 +1,8 @@
+ = Visual Studio 2010 serial number =
+D23HK-F9CWV-VXMY2-7KPY9-WYFDP 
+
+
+= Probleme de lacement d'u exe en 'Live Simulation' =
+Simulator process returns 0xC0000135
+
+Raison: il manque le chemin vers MinGW/bin dans la variable d'environnement PATH du projet 

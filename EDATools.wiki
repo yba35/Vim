@@ -1,2 +1,3 @@
 = CtoS design - open a design using Simvision in GUI mode =
+ make rtl_sim USER_ARGS="-Iinclude/ -DPRODUCER_THROUGHPUT=5 -DCONSUMER_THROUGHPUT=1 output_fifo_assertion.sv" SIM_GUI=1
 

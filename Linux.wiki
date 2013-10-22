@@ -1,0 +1,18 @@
+= Install LaTEX to build a resume =
+sudo apt-get install texlive
+sudo apt-get install cm-super
+sudo apt-get install kile
+sudo apt-get install texlive-latex-extra
+
+The latest line is required for installing the moderncv package.
+
+= File exists ('ls' command)... but do not exist when executed =
+  * First, use 'ldd' command to check if some dynamic libraries are missing
+  * Do a 'file' command to check if the executable is '32 bits' or '64 bits'
+    * In case of 32 bits, and if the OS is 64 bits, try to install the 32 bits emulation libraries:
+      > sudo apt-get install ia32-libs
+
+
+
+
+
