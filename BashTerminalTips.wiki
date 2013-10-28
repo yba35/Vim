@@ -8,4 +8,6 @@ To change the terminal language to english
 = Grep - Search for a given string pattern inside a given directory =
 `grep -r -l "foo" .bash/`
 
+= Find - recursively search for a given string pattern inside files with a given extension =
+`find target_dir/` -name "*.txt" -exec grep "foo" {} \;
 
