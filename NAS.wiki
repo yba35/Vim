@@ -1,0 +1,36 @@
+= Paramètrages Routeur & NAS pour accès externe =
+== 1ere étape : paramètrage routeur ==
+Example avec la livebox, il faut:
+- Affecter une adresse IP fixe au NAS (paramètrage du DHCP)
+- Au niveau du pare-feu, autoriser le ssh (port 22) et ajouter les ports du DSM: 5000 et 5001
+- Au niveau de la transmission de port (NAT), forwarder les ports 22, 5000 & 5001 vers le NAS
+- Au niveau du service DDNS, configurer le reverse DNS avvec le compte créeé sur le site 'no-ip'
+
+== 2eme étape : paramètrage DSM == 
+- Au niveau pare-feu, autoriser le SSH et les ports DSM
+- Au niveau du terminal, autoriser les connexions SSH
+- Au niveau du service DDNS, configurer le reverse DNS avvec le compte créeé sur le site 'no-ip'
+
+
+= Caracteristiques techniques =
+DS213j
+Marvell Armada 370 ARMv7l armada370	16-bit@DDR3 512MB Hardware Encryption Engine, Wake on LAN/WAN Support
+
+= Installation de ipkg sur NAS DS213j =
+Objectif: installer un client FTP
+On a suivi le tuto suivant:
+https://github.com/trepmag/ds213j-optware-bootstrap
+
+Atention à ce que les caractères de fin de ligne soiet corrects dans le fichier /etc/rc.optware afin que le répertoire /opt soit correctement monté
+
+Ensuite, il créer un répertoire suivant pour le compte admin afin de pouvoir lancer les outils en tant qu'admin et non root
+ > mkdir /volume1/@fake_home_link/admin (en root)
+ > chown -R admin /volume1/@fake_home_link/admin
+ 
+ = usage de ipkg =
+ On doit etre root et spécifié le path complet
+
+ Pour lister les packages dispo:
+ /opt/bin/ipkg list
+
+
