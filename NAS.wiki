@@ -33,4 +33,29 @@ Ensuite, il créer un répertoire suivant pour le compte admin afin de pouvoir l
  Pour lister les packages dispo:
  /opt/bin/ipkg list
 
+= lien vers le SDK et les sources du NAS =
+http://sourceforge.net/projects/dsgpl/files/DSM%204.3%20Tool%20Chains/Marvell%20armada%20370%20Linux%203.2.40/
+
+= Installer le daemon rsync =
+
+On se base sur le tuto suivant:
+http://www.synology.com/support/tutorials_show.php?lang=fre&q_id=461
+
+Aller dans 'Control Panel->Network backup' et activer 'Enable Network Backup service'
+
+Ensuite, éditer sur le NAS le fichier /etc/rsyncd.conf et ajouter des sections:
+
+[SandBox]
+uid=admin
+gid=users
+path=/volume1/misc/sandbox
+comment=Rsync sandbox
+
+
+Enfin, redémarrer le service rsync
+> /usr/syno/etc.defaults/rc.d/S84rsyncd.sh stop
+> /usr/syno/etc.defaults/rc.d/S84rsyncd.sh start
+
+Pour synchroniser à partir du client, lancer la commade suivante:
+> rsync --dry-run -az -r --stats sand_box_rsync ryba35.no-ip.biz::SandBox/
 
