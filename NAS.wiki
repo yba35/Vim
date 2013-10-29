@@ -41,6 +41,7 @@ http://sourceforge.net/projects/dsgpl/files/DSM%204.3%20Tool%20Chains/Marvell%20
 On se base sur le tuto suivant:
 http://www.synology.com/support/tutorials_show.php?lang=fre&q_id=461
 
+== Rsync config ==
 Aller dans 'Control Panel->Network backup' et activer 'Enable Network Backup service'
 
 Ensuite, éditer sur le NAS le fichier /etc/rsyncd.conf et ajouter des sections:
@@ -50,12 +51,20 @@ uid=admin
 gid=users
 path=/volume1/misc/sandbox
 comment=Rsync sandbox
-
+auth users = root
+secrets file = /etc/rsyncd.secrets
 
 Enfin, redémarrer le service rsync
 > /usr/syno/etc.defaults/rc.d/S84rsyncd.sh stop
 > /usr/syno/etc.defaults/rc.d/S84rsyncd.sh start
 
-Pour synchroniser à partir du client, lancer la commade suivante:
-> rsync --dry-run -az -r --stats sand_box_rsync ryba35.no-ip.biz::SandBox/
+== Firewall settings ==
+Rajouter le servce 'Network Backup' dans les règles du Firewall du NAS
 
+== commande de synchro client ==
+Pour synchroniser à partir du client, lancer la commade suivante:
+> rsync -az -r --delete --progress --stats sand_box_rsync --backup --backup-dir=/volume1/misc/sandbox/DELETED -e ssh root@ryba35.no-ip.biz:/volume1/misc/sandbox/
+
+== Statut ==
+Pour le moment, ça ne marche pas, on utilise la conexion avec SSH:
+rsync -az -r --delete --progress --stats sand_box_rsync --backup --backup-dir=/volume1/misc/sandbox/DELETED -e ssh root@ryba35.no-ip.biz:/volume1/misc/sandbox/
