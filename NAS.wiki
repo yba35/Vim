@@ -16,6 +16,14 @@ Example avec la livebox, il faut:
 DS213j
 Marvell Armada 370 ARMv7l armada370	16-bit@DDR3 512MB Hardware Encryption Engine, Wake on LAN/WAN Support
 
+= Conexion FTP à Sdedi =
+On utilise ncftp
+Il faut absolumet être en mode passif:
+> ncftp
+> set passive on
+
+Sinon, on a du timeout sur une commande 'ls'
+
 = Installation de ipkg sur NAS DS213j =
 Objectif: installer un client FTP
 On a suivi le tuto suivant:
@@ -27,11 +35,19 @@ Ensuite, il créer un répertoire suivant pour le compte admin afin de pouvoir l
  > mkdir /volume1/@fake_home_link/admin (en root)
  > chown -R admin /volume1/@fake_home_link/admin
  
- = usage de ipkg =
+== usage de ipkg ==
  On doit etre root et spécifié le path complet
 
  Pour lister les packages dispo:
  /opt/bin/ipkg list
+ 
+== liste de packages utiles ==
+bash less lftp vim sudo screen mc ncftp
+
+== installation de sudo ==
+> echo 'admin ALL=(ALL) ALL' >> /opt/etc/sudoers
+> chmod 0440 /opt/etc/sudoers
+
 
 = lien vers le SDK et les sources du NAS =
 http://sourceforge.net/projects/dsgpl/files/DSM%204.3%20Tool%20Chains/Marvell%20armada%20370%20Linux%203.2.40/
@@ -67,4 +83,4 @@ Pour synchroniser à partir du client, lancer la commade suivante:
 
 == Statut ==
 Pour le moment, ça ne marche pas, on utilise la conexion avec SSH:
-rsync -az -r --delete --progress --stats sand_box_rsync --backup --backup-dir=/volume1/misc/sandbox/DELETED -e ssh root@ryba35.no-ip.biz:/volume1/misc/sandbox/
+rsync -z -r --delete --progress --stats sand_box_rsync --backup --backup-dir=/volume1/misc/sandbox/DELETED -e ssh root@ryba35.no-ip.biz:/volume1/misc/sandbox/

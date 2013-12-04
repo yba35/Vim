@@ -1,11 +1,34 @@
 = Development =
 
 == Setting the MinGW Debugger in Eclipse ==
+The program to debug has been compiled using Cygwin G++ with -O0 and -g3 options
 To use a specific MinGW toolchain and debugger in an Eclipse project: 
 
 - Open the used 'Debug' configuration 
 - Behind 'using Standard Create Process Launcher', click on 'Select Other' 
    - 'Standard Create Process Launcher' should be set 
-- Go to 'Debugger' tab and select 'MinGW gdb' 
-- In 'GDB debugger', set the full path of the MinGW gdb 
-- Uncheck 'Use file path to set bbreakpoints
+- Go to 'Debugger' tab and select 'gdb/mi' 
+- In 'GDB debugger', set the full path of the MinGW gdb
+- GDB Command set = 'standard (windows)'
+- Protocol = 'mi'
+- Uncheck 'Use file path to set breakpoints'
+- 
+
+== Setting an Eclipse Cygwin C++ project from a Makefile project ==
+A partir d'un simple makefile et des fichiers sources
+
+Dans les propriétés du projet, il faut créer et sélectionner une nouvelle build_config C++ dans C/C++ Build
+Proprétés de la build config:
+Create New -> Omport predefined -> Cygwin GCC Debug
+
+Dans C/C++ Build -> Environment
+- ajouter les variables d'environnement nécessaires au Makefile au format cygwin (/cygdrive/c/....) et non pas Windows
+-
+
+Dans C/C++ General
+- Indexer: cocher la case 'Enable project specific settings'
+- PreprocessorInclude Paths, Macros...: cocher la case 'Enable language setting providers for this project'
+
+
+
+

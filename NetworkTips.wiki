@@ -1,3 +1,24 @@
 = How to find a router adress =
 Type a traceroute command; first IP adress is the one of the connected router 
 `> traceroute www.google.fr`
+
+= Test access to smtp sever =
+To know if firewall and router are properly configured:
+
+> telnet smtp.free.fr 25
+> telnet smtp.free.fr 465
+> telnet smtp.free.fr 587
+
+= SMTP server thunderbird config =
+Il faut ouvrir les ports 465 ou 587
+
+les config *Thunderbird* qui marchent pour la livebox:
+
+smtp.free.fr
+port 465
+Connection security: SSL/TLS
+Authentication method: encrypted password
+user name: yann.bajot
+password: cf lastpass pour zimbra
+
+
