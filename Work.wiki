@@ -1,4 +1,19 @@
- = Visual Studio 2010 serial number =
+= Installation LateX sur Windows pour ModernCV =
+
+- D'abord, installer MiKTeX en version portable
+http://miktex.org/about
+
+C'est un esemble d'outils TeX compilés sous Windows
+Lancer le gestionnaires de package et installer moderncv
+- Ensuite, installer TexMaker comme front-end graphique
+http://www.xm1math.net/texmaker/doc_fr.html#SECTION01
+- Avant de le lancer, modifier le PATH windows afin d'inclure le chemin vers le binaires de MikTeX
+Exemple: C:\Users\ybajotx\Documents\miktex\miktex\bin
+- Enfin, ouvir le fichier tex et lancer un 'Quick Build': le gestionnaire de package téléchargera automatiquement tous les packages manquants
+
+
+
+= Visual Studio 2010 serial number =
 D23HK-F9CWV-VXMY2-7KPY9-WYFDP 
 
 
