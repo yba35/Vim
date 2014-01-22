@@ -6,3 +6,4 @@
   * [[EDATools]] -- all tips about EDA tools such as Cadence Incisive/Ctos, etc...
   * [[Linux]] -- All tips about Linux
   * [[Work]] -- All about current work
+  * [[NAS]] -- All about Synology DS213j NAS

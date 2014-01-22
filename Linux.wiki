@@ -13,6 +13,7 @@ The latest line is required for installing the moderncv package.
       > sudo apt-get install ia32-libs
 
 
+= Install a fresh Bash configuration using Git =
 
 
 
