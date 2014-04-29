@@ -1,0 +1,6 @@
+Bundle 'spf13-vim-3/bufexplorer.zip'
+Bundle 'spf13-vim-3/Align'
+Bundle 'spf13-vim-3/vimwiki'
+Bundle 'spf13-vim-3/bash-support.vim'
+Bundle 'spf13-vim-3/a.vim'
+Bundle 'spf13-vim-3/systemverilog.vim'

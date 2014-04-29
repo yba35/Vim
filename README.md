@@ -3,13 +3,8 @@ Vim
 
 Vim configuration files
 
-Instalation:
+'spf13config_save' directory contains local files that should be copied in the .spf13-vim-3 directory
+'vimiwiki' contains the vimwiki files - just edit the .vimrc.local file to adapt the  g:vimwiki_list variable
 
-> cd ~
-> mkdir vim
-> git clone https://github.com/yba35/Vim.git vim/
-> ln -s vim/_vimrc .vimrc &&  ln -s vim/_gvimrc .gvimrc
-> export VIMRUNTIME=/usr/share/vim/vim73/
-> export VIM=$HOME/vim
 
 

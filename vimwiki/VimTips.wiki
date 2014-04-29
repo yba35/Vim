@@ -1,0 +1,47 @@
+= Rebuild help tags =
+`:helptags $VIM/vimfiles/doc`
+
+= Suppress ^M at the end of line =
+To remove the ^M characters at the end of all lines in vi, use:
+
+:%s/^V^M//g
+
+The ^v is a CONTROL-V character and ^m is a CONTROL-M. When you type this, it will look like this:
+
+:%s/^M//g
+- See more at: http://www.tech-recipes.com/rx/150/remove-m-characters-at-end-of-lines-in-vi/#sthash.fBCQEg0c.dpuf
+
+
+= Install spf13-vim =
+
+== Prérequis ==
+- VIM doit être installé
+- git et curl doivent être installés sous cygwin, et accessibles par le PATH windows
+-
+
+1 Télécharger le script d'installation https://github.com/spf13/spf13-vim/raw/3.0/spf13-vimfiles-windows-install.cmd
+2 Le lancer en mode super-user (bouton-droit dessus)
+
+== customization ==
+- créer le script spf13-create-vim-local-config-files.cmd avec le code suivant:
+
+@if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%
+@if not exist "%HOME%" @set HOME=%USERPROFILE%
+
+@set BASE_DIR=%HOME%\.spf13-vim-3
+
+call mklink "%HOME%\.vimrc.local" "%BASE_DIR%\.vimrc.local"
+call mklink "%HOME%\.gvimrc.local" "%BASE_DIR%\.gvimrc.local"
+
+- copier les fichiers .vimrc.local, .gvimrc.local, et .vimrc.bundles.local dans le répertoire .spf13-vim-3
+- exécuter le script pour créer les liens symboliques vers les fichiers '.local'
+- pour ajouter un Bundle, il faut:
+-   - Verifier qu'il existe dans le repository, en tapant ':BundleSearch NomDuPlugin'
+-   - Ajouter une ligne dans le .vimrc.bundles.local (exemple: Bundle 'spf13-vim-3/bash-support.vim')
+-   - Ajouter une ligne presque identique dans le .vimrc.local (exemple: Bundle 'bash-support.vim')
+-   - Mettre à jour les plgins (cf. plus bas)
+== mise à jour des plugins ==
+lancer la commande suivante:
+
+vim +BundleInstall! +BundleClean +q
+
