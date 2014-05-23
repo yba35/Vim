@@ -10,9 +10,7 @@ Vundle need to be installed.
 
 Installation
 -------------
-cd $USERPROFILE
-git clone https://github.com/yba35/Vim.git vimconfig
-ln vimconfig/.vimrc _vimrc
+cd "$USERPROFILE"; git clone https://github.com/yba35/Vim.git vimconfig; ln vimconfig/.vimrc _vimrc
 
 
 
