@@ -73,11 +73,24 @@ if has('clipboard')
     endif
 endif
 
+
+"------------------------------------------------------------------------------
+"  VIM UI
+"------------------------------------------------------------------------------
+set backspace=indent,eol,start  " Backspace for dummies
+
 "------------------------------------------------------------------------------
 "  Misc
 "------------------------------------------------------------------------------
 se visualbell
 set history=1000
+
+
+"""""""""""""""""""""""""""""""""
+""" Swap files location
+"""""""""""""""""""""""""""""""""
+set backupdir=$TEMP
+set directory=$TEMP
 
 "------------------------------------------------------------------------------
 "  Text formatting
@@ -144,8 +157,7 @@ map  <F7> :cnewer<CR>
 :imap <S-F7> <ESC>:cnext<CR> 
 
 " edition du _vimrc
-:map <Leader>v n:e $VIM/.vimrc.local<CR>
-:map <Leader>s :source $VIM/.vimrc.local<CR>
+:map <Leader>v n:e $USERPROFILE/_vimrc<CR>
 
 " Buffer navigation
 :nmap <C-down> :BufExplorer<cr>
@@ -169,7 +181,7 @@ se ignorecase
 :let g:bufExplorerSplitType='v'       " Split vertically.
 
 " vimwiki
-let g:vimwiki_list = [{'path': '$HOME/.spf13-vim-3/vimwiki'}]
+let g:vimwiki_list = [{'path': '$USERPROFILE/vimconfig/vimwiki'}]
 
 """""""""""""""""""""""""""""""""
 """ Commandes utiles 
