@@ -36,6 +36,7 @@ Plugin 'gmarik/Vundle.vim'
 "------------------------------------------------------------------------------
 Plugin 'bufexplorer.zip'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ervandew/supertab'
 Plugin 'Align'
 Plugin 'vimwiki'
 Plugin 'bash-support.vim'
