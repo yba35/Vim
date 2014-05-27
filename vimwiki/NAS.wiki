@@ -1,9 +1,9 @@
-= Accès au NAS depuis un navigateur =
+= Acc�s au NAS depuis un navigateur =
 Voir ''DSM_Lancieux' dans LastPass pour les identifiants
 Aller à l'adresse http://ryba35.no-ip.biz:5000/webman/index.cgi
 
 
-= Paramètrages Routeur & NAS pour accès externe =
+= Param�trages Routeur & NAS pour accès externe =
 == 1ere étape : paramètrage routeur ==
 Example avec la livebox, il faut:
 - Affecter une adresse IP fixe au NAS (paramètrage du DHCP)
@@ -11,7 +11,7 @@ Example avec la livebox, il faut:
 - Au niveau de la transmission de port (NAT), forwarder les ports 22, 5000 & 5001 vers le NAS
 - Au niveau du service DDNS, configurer le reverse DNS avvec le compte créeé sur le site 'no-ip'
 
-== 2eme étape : paramètrage DSM == 
+== 2eme �tape : paramètrage DSM == 
 - Au niveau pare-feu, autoriser le SSH et les ports DSM
 - Au niveau du terminal, autoriser les connexions SSH
 - Au niveau du service DDNS, configurer le reverse DNS avvec le compte créeé sur le site 'no-ip'

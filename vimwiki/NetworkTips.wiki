@@ -21,4 +21,17 @@ Authentication method: encrypted password
 user name: yann.bajot
 password: cf lastpass pour zimbra
 
+= How to mount an NFS share on Ubuntu =
+Il faut:
+- que le NFS suport soit activé au niveau du NAS
+- que le nom d'utilisateur de la machine Linux existe aussi sur le NAS
+- que l'utilisateur ait les drois d'accès au répertoire partagé que l'on souhaite monter (cf. propriétés des Shared Folders sur DSM)
+- que la machine client soit déclarée dans les propriétés NFS du répertoire partagé - dans Squach, mettre 'no mapping'
+
+Ensuite, au niveau de la machine  cliente, il faut utiliser:
+> sudo /sbin/mount.nfs 192.168.1.11:/volume1/video /media/nas/video  
+
+
+
+
 
