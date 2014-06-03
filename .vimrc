@@ -32,6 +32,10 @@ Plugin 'gmarik/Vundle.vim'
 " Plugin 'user/L9', {'name': 'newL9'}
 
 "------------------------------------------------------------------------------
+"  Local parameters
+"------------------------------------------------------------------------------
+
+"------------------------------------------------------------------------------
 "  Additional plugins
 "------------------------------------------------------------------------------
 Plugin 'bufexplorer.zip'
@@ -42,6 +46,8 @@ Plugin 'vimwiki'
 Plugin 'bash-support.vim'
 Plugin 'a.vim'
 Plugin 'systemverilog.vim'
+Plugin 'yegappan/grep'
+Plugin 'scrooloose/nerdcommenter'
 
 
 
@@ -60,7 +66,17 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
+"------------------------------------------------------------------------------
+"  Plugin customization
+"------------------------------------------------------------------------------
+" grep.vim
+let Grep_Path = 'C:\cygwin64\bin\grep.exe' 
+let Fgrep_Path = 'C:\cygwin64\bin\fgrep.exe' 
+let Egrep_Path = 'C:\cygwin64\bin\egrep.exe' 
+let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
+let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
+let Grep_Find_Path = 'C:\cygwin64\bin\find.exe' 
+let Grep_Xargs_Path = 'C:\cygwin64\bin\xargs.exe' 
 
 "------------------------------------------------------------------------------
 "  Change some default value
@@ -83,6 +99,22 @@ endif
 "  VIM UI
 "------------------------------------------------------------------------------
 set backspace=indent,eol,start  " Backspace for dummies
+set linespace=0 " No extra spaces between rows
+set nu " Line numbers on
+set showmatch " Show matching brackets/parenthesis
+set incsearch " Find as you type search
+set hlsearch " Highlight search terms
+set winminheight=0 " Windows can be 0 line high
+set ignorecase " Case insensitive search
+set smartcase " Case sensitive when uc present
+set wildmenu " Show list instead of just completing
+set wildmode=list:longest,full " Command <Tab> completion, list matches, then longest common part, then all.
+set whichwrap=b,s,h,l,<,>,[,] " Backspace and cursor keys wrap too
+set scrolljump=5 " Lines to scroll when cursor leaves screen
+set scrolloff=3 " Minimum lines to keep above and below cursor
+set foldenable " Auto fold code
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
 "------------------------------------------------------------------------------
 "  Misc
