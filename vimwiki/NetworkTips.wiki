@@ -1,3 +1,23 @@
+= How to know what proxy server i am using =
+source: http://superuser.com/questions/346372/how-do-i-know-what-proxy-server-im-using
+
+Pour trouver le suffix: ipconfig /all puis chercher Primary DNS suffix
+
+In your browser enter http://wpad.<suffix>/wpad.dat. This will download the proxy auto configuration file you can open in notepad.exe
+
+Toward the bottom of this file, you should see a line saying
+PROXY <host:port>;
+
+= Setup proxy for cygwin =
+source: http://stackoverflow.com/questions/197904/how-do-i-use-cygwin-behind-the-corporate-firewall
+
+export http_proxy=http://username:password@host:port/
+export https_proxy=http://username:password@host:port/
+
+= How to see all opened sockets =
+netstat (Windows command line only - ne fonctionne pas dans un terminal cygwin)
+
+
 = How to find a router adress =
 Type a traceroute command; first IP adress is the one of the connected router 
 `> traceroute www.google.fr`
@@ -31,6 +51,18 @@ Il faut:
 Ensuite, au niveau de la machine  cliente, il faut utiliser:
 > sudo /sbin/mount.nfs 192.168.1.11:/volume1/video /media/nas/video  
 
+= Hubic access in command line =
+
+
+== Installer python dans cygwin ==
+== Installer setuptools dans python ==
+https://pypi.python.org/pypi/setuptools#unix-wget
+
+Charger manuellement le fichier pluis lancer python dessus
+> wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+
+== Installer hubic command line ==
+> git clone https://github.com/Gu1/python-hubicclient
 
 
 
