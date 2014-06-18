@@ -48,6 +48,15 @@ Plugin 'a.vim'
 Plugin 'systemverilog.vim'
 Plugin 'yegappan/grep'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'c.vim'
+Plugin 'Vim-support'
+
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
+
 
 
 
