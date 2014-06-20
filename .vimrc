@@ -55,6 +55,7 @@ Bundle 'vimwiki'
 Bundle 'bash-support.vim'
 Bundle 'a.vim'
 Bundle 'systemverilog.vim'
+Bundle 'SuperTab'
 
 
 "------------------------------------------------------------------------------
@@ -78,6 +79,8 @@ endif
 "------------------------------------------------------------------------------
 se visualbell
 set history=1000
+
+set backspace=indent,eol,start  " Backspace for dummies
 
 "------------------------------------------------------------------------------
 "  Text formatting
