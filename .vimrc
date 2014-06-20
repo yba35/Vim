@@ -18,18 +18,48 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
+" Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+" Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
+" Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
-Plugin 'user/L9', {'name': 'newL9'}
+" Plugin 'user/L9', {'name': 'newL9'}
+
+"------------------------------------------------------------------------------
+"  Local parameters
+"------------------------------------------------------------------------------
+
+"------------------------------------------------------------------------------
+"  Additional plugins
+"------------------------------------------------------------------------------
+Plugin 'bufexplorer.zip'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ervandew/supertab'
+Plugin 'Align'
+Plugin 'vimwiki'
+Plugin 'bash-support.vim'
+Plugin 'a.vim'
+Plugin 'systemverilog.vim'
+Plugin 'yegappan/grep'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'c.vim'
+Plugin 'Vim-support'
+Plugin 'SuperTab'
+
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
+
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,16 +77,16 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "------------------------------------------------------------------------------
-"  Additional bundles
+"  Plugin customization
 "------------------------------------------------------------------------------
-Bundle 'bufexplorer.zip'
-Bundle 'Align'
-Bundle 'vimwiki'
-Bundle 'bash-support.vim'
-Bundle 'a.vim'
-Bundle 'systemverilog.vim'
-Bundle 'SuperTab'
-
+" grep.vim
+let Grep_Path = 'C:\cygwin64\bin\grep.exe' 
+let Fgrep_Path = 'C:\cygwin64\bin\fgrep.exe' 
+let Egrep_Path = 'C:\cygwin64\bin\egrep.exe' 
+let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
+let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
+let Grep_Find_Path = 'C:\cygwin64\bin\find.exe' 
+let Grep_Xargs_Path = 'C:\cygwin64\bin\xargs.exe' 
 
 "------------------------------------------------------------------------------
 "  Change some default value
@@ -74,13 +104,39 @@ if has('clipboard')
     endif
 endif
 
+
+"------------------------------------------------------------------------------
+"  VIM UI
+"------------------------------------------------------------------------------
+set backspace=indent,eol,start  " Backspace for dummies
+set linespace=0 " No extra spaces between rows
+set nu " Line numbers on
+set showmatch " Show matching brackets/parenthesis
+set incsearch " Find as you type search
+set hlsearch " Highlight search terms
+set winminheight=0 " Windows can be 0 line high
+set ignorecase " Case insensitive search
+set smartcase " Case sensitive when uc present
+set wildmenu " Show list instead of just completing
+set wildmode=list:longest,full " Command <Tab> completion, list matches, then longest common part, then all.
+set whichwrap=b,s,h,l,<,>,[,] " Backspace and cursor keys wrap too
+set scrolljump=5 " Lines to scroll when cursor leaves screen
+set scrolloff=3 " Minimum lines to keep above and below cursor
+set foldenable " Auto fold code
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+
 "------------------------------------------------------------------------------
 "  Misc
 "------------------------------------------------------------------------------
 se visualbell
 set history=1000
 
-set backspace=indent,eol,start  " Backspace for dummies
+"""""""""""""""""""""""""""""""""
+""" Swap files location
+"""""""""""""""""""""""""""""""""
+set backupdir=$TEMP
+set directory=$TEMP
 
 "------------------------------------------------------------------------------
 "  Text formatting
@@ -147,8 +203,7 @@ map  <F7> :cnewer<CR>
 :imap <S-F7> <ESC>:cnext<CR> 
 
 " edition du _vimrc
-:map <Leader>v n:e $VIM/.vimrc.local<CR>
-:map <Leader>s :source $VIM/.vimrc.local<CR>
+:map <Leader>v n:e $USERPROFILE/_vimrc<CR>
 
 " Buffer navigation
 :nmap <C-down> :BufExplorer<cr>
@@ -172,7 +227,7 @@ se ignorecase
 :let g:bufExplorerSplitType='v'       " Split vertically.
 
 " vimwiki
-let g:vimwiki_list = [{'path': '$HOME/.spf13-vim-3/vimwiki'}]
+let g:vimwiki_list = [{'path': '$USERPROFILE/vimconfig/vimwiki'}]
 
 """""""""""""""""""""""""""""""""
 """ Commandes utiles 
