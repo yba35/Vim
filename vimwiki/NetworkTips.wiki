@@ -8,6 +8,12 @@ In your browser enter http://wpad.<suffix>/wpad.dat. This will download the prox
 Toward the bottom of this file, you should see a line saying
 PROXY <host:port>;
 
+= Setup proxy for git windows =
+http://stackoverflow.com/questions/783811/getting-git-to-work-with-a-proxy-server
+In Git Bash console:
+git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
+
+
 = Setup proxy for cygwin =
 source: http://stackoverflow.com/questions/197904/how-do-i-use-cygwin-behind-the-corporate-firewall
 
@@ -43,10 +49,10 @@ password: cf lastpass pour zimbra
 
 = How to mount an NFS share on Ubuntu =
 Il faut:
-- que le NFS suport soit activé au niveau du NAS
+- que le NFS suport soit activï¿½ au niveau du NAS
 - que le nom d'utilisateur de la machine Linux existe aussi sur le NAS
-- que l'utilisateur ait les drois d'accès au répertoire partagé que l'on souhaite monter (cf. propriétés des Shared Folders sur DSM)
-- que la machine client soit déclarée dans les propriétés NFS du répertoire partagé - dans Squach, mettre 'no mapping'
+- que l'utilisateur ait les drois d'accï¿½s au rï¿½pertoire partagï¿½ que l'on souhaite monter (cf. propriï¿½tï¿½s des Shared Folders sur DSM)
+- que la machine client soit dï¿½clarï¿½e dans les propriï¿½tï¿½s NFS du rï¿½pertoire partagï¿½ - dans Squach, mettre 'no mapping'
 
 Ensuite, au niveau de la machine  cliente, il faut utiliser:
 > sudo /sbin/mount.nfs 192.168.1.11:/volume1/video /media/nas/video  
