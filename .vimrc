@@ -1,6 +1,19 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+"------------------------------------------------------------------------------
+"  OS recognition function
+"------------------------------------------------------------------------------
+silent function! OSX()
+    return has('macunix')
+endfunction
+silent function! LINUX()
+    return has('unix') && !has('macunix') && !has('win32unix')
+endfunction
+silent function! WINDOWS()
+    return (has('win16') || has('win32') || has('win64'))
+endfunction
+
 
 "------------------------------------------------------------------------------
 "  Vundle setting
@@ -45,7 +58,6 @@ Plugin 'Align'
 Plugin 'vimwiki'
 Plugin 'bash-support.vim'
 Plugin 'a.vim'
-Plugin 'systemverilog.vim'
 Plugin 'yegappan/grep'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'c.vim'
@@ -56,6 +68,8 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+
+Plugin 'nachumk/systemverilog.vim'
 
 
 
@@ -80,20 +94,33 @@ filetype plugin indent on    " required
 "  Plugin customization
 "------------------------------------------------------------------------------
 " grep.vim
-let Grep_Path = 'C:\cygwin64\bin\grep.exe' 
-let Fgrep_Path = 'C:\cygwin64\bin\fgrep.exe' 
-let Egrep_Path = 'C:\cygwin64\bin\egrep.exe' 
-let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
-let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
-let Grep_Find_Path = 'C:\cygwin64\bin\find.exe' 
-let Grep_Xargs_Path = 'C:\cygwin64\bin\xargs.exe' 
+if WINDOWS()
+    let Grep_Path = 'C:\cygwin64\bin\grep.exe' 
+    let Fgrep_Path = 'C:\cygwin64\bin\fgrep.exe' 
+    let Egrep_Path = 'C:\cygwin64\bin\egrep.exe' 
+    let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
+    let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
+    let Grep_Find_Path = 'C:\cygwin64\bin\find.exe' 
+    let Grep_Xargs_Path = 'C:\cygwin64\bin\xargs.exe' 
+endif
+
+"netrw
+if WINDOWS()
+    let g:netrw_cygwin            = 1
+endif
 
 "------------------------------------------------------------------------------
 "  Change some default value
 "------------------------------------------------------------------------------
 set nocursorline
 color darkblue
-set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
+if LINUX() && has("gui_running")
+    set guifont=Andale\ Mono\ Regular\ 12,Menlo\ Regular\ 11,Consolas\ Regular\ 12,Courier\ New\ Regular\ 14
+elseif OSX() && has("gui_running")
+    set guifont=Andale\ Mono\ Regular:h12,Menlo\ Regular:h11,Consolas\ Regular:h12,Courier\ New\ Regular:h14
+elseif WINDOWS() && has("gui_running")
+    set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
+endif
 syntax enable
 
 if has('clipboard')
@@ -124,7 +151,7 @@ set scrolljump=5 " Lines to scroll when cursor leaves screen
 set scrolloff=3 " Minimum lines to keep above and below cursor
 set foldenable " Auto fold code
 set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+set listchars=tab:>\ ,trail:*,extends:#,nbsp:. " Highlight problematic whitespace
 
 "------------------------------------------------------------------------------
 "  Misc
@@ -135,8 +162,13 @@ set history=1000
 """""""""""""""""""""""""""""""""
 """ Swap files location
 """""""""""""""""""""""""""""""""
-set backupdir=$TEMP
-set directory=$TEMP
+if WINDOWS()
+    set backupdir=$TEMP
+    set directory=$TEMP
+else
+    set backupdir=/tmp
+    set directory=/tmp
+endif
 
 "------------------------------------------------------------------------------
 "  Text formatting
@@ -203,7 +235,11 @@ map  <F7> :cnewer<CR>
 :imap <S-F7> <ESC>:cnext<CR> 
 
 " edition du _vimrc
-:map <Leader>v n:e $USERPROFILE/_vimrc<CR>
+if WINDOWS()
+    :map <Leader>v n:e $USERPROFILE/_vimrc<CR>
+else
+    :map <Leader>v n:e $HOME/.vimrc<CR>
+endif
 
 " Buffer navigation
 :nmap <C-down> :BufExplorer<cr>
@@ -227,7 +263,12 @@ se ignorecase
 :let g:bufExplorerSplitType='v'       " Split vertically.
 
 " vimwiki
-let g:vimwiki_list = [{'path': '$USERPROFILE/vimconfig/vimwiki'}]
+if WINDOWS()
+    let g:vimwiki_list = [{'path': '$USERPROFILE/vimconfig/vimwiki'}]
+else
+    let g:vimwiki_list = [{'path': '$HOME/vimconfig/vimwiki'}]
+endif
+
 
 """""""""""""""""""""""""""""""""
 """ Commandes utiles 
@@ -235,7 +276,7 @@ let g:vimwiki_list = [{'path': '$USERPROFILE/vimconfig/vimwiki'}]
 
 
 """"" Pour virer les 'escaped characters' de couleurs
-" pour afficher le caractere spÃƒÂ©ciual: CTRL_V puis CTRL+ALTGR+[
+" pour afficher le caractere special: CTRL_V puis CTRL+ALTGR+[
 " :%s/\[[0-9]\{-}m//g
 
 "------------------------------------------------------------------------------
