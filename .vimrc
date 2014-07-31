@@ -110,10 +110,14 @@ if WINDOWS()
 endif
 
 "------------------------------------------------------------------------------
-"  Change some default value
+"  GUI Look and feel
 "------------------------------------------------------------------------------
-set nocursorline
-color darkblue
+if !has("gui_running")
+    color blue
+else 
+    color darkblue
+endif
+
 if LINUX() && has("gui_running")
     set guifont=Andale\ Mono\ Regular\ 12,Menlo\ Regular\ 11,Consolas\ Regular\ 12,Courier\ New\ Regular\ 14
 elseif OSX() && has("gui_running")
@@ -121,7 +125,8 @@ elseif OSX() && has("gui_running")
 elseif WINDOWS() && has("gui_running")
     set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
 endif
-syntax enable
+
+
 
 if has('clipboard')
     if has('unnamedplus') " When possible use + register for copy-paste
@@ -135,6 +140,8 @@ endif
 "------------------------------------------------------------------------------
 "  VIM UI
 "------------------------------------------------------------------------------
+syntax enable
+set nocursorline
 set backspace=indent,eol,start  " Backspace for dummies
 set linespace=0 " No extra spaces between rows
 set nu " Line numbers on
