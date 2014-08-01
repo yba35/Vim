@@ -1,120 +1,131 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" YBA filetype off                  " required 
+
+" Environment {
+
+    " Identify Platform {
+
+    silent function! OSX()
+        return has('macunix')
+    endfunction
+    silent function! LINUX()
+        return has('unix') && !has('macunix') && !has('win32unix')
+    endfunction
+    silent function! WINDOWS()
+        return (has('win16') || has('win32') || has('win64'))
+    endfunction
+    " }
+
+
+    " Basics {
+            set nocompatible " Must be first line
+            if !WINDOWS()
+                set shell=/bin/sh
+            endif
+    " }
+
+    " Windows Compatible {
+    " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+    " across (heterogeneous) systems easier.
+            if WINDOWS()
+              set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+            endif
+    " }
+
+" }
+
+
+"  Vundle setting {
+
+    set rtp+=~/vimfiles/bundle/Vundle.vim/
+    let path='~/vimfiles/bundle'
+    call vundle#begin(path)
+    " alternatively, pass a path where Vundle should install plugins
+    "call vundle#begin('~/some/path/here')
+
+    " let Vundle manage Vundle, required
+    Plugin 'gmarik/Vundle.vim'
+
+    " The following are examples of different formats supported.
+    " Keep Plugin commands between vundle#begin/end.
+    " plugin on GitHub repo
+    " Plugin 'tpope/vim-fugitive'
+    " plugin from http://vim-scripts.org/vim/scripts.html
+    " Plugin 'L9'
+    " Git plugin not hosted on GitHub
+    " Plugin 'git://git.wincent.com/command-t.git'
+    " git repos on your local machine (i.e. when working on your own plugin)
+    " Plugin 'file:///home/gmarik/path/to/plugin'
+    " The sparkup vim script is in a subdirectory of this repo called vim.
+    " Pass the path to set the runtimepath properly.
+    "  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+    " Avoid a name conflict with L9
+    " Plugin 'user/L9', {'name': 'newL9'}
+
+    Plugin 'bufexplorer.zip'
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'ervandew/supertab'
+    Plugin 'Align'
+    Plugin 'vimwiki'
+    Plugin 'bash-support.vim'
+    Plugin 'a.vim'
+    Plugin 'yegappan/grep'
+    Plugin 'scrooloose/nerdcommenter'
+    Plugin 'c.vim'
+    Plugin 'Vim-support'
+    Plugin 'SuperTab'
+
+    Plugin 'MarcWeber/vim-addon-mw-utils'
+    Plugin 'tomtom/tlib_vim'
+    Plugin 'garbas/vim-snipmate'
+    Plugin 'honza/vim-snippets'
+    Plugin 'nachumk/systemverilog.vim'
+
+    " All of your Plugins must be added before the following line
+    call vundle#end()            " required
+    filetype plugin indent on    " required
+    " To ignore plugin indent changes, instead use:
+    "filetype plugin on
+    "
+    " Brief help
+    " :PluginList          - list configured plugins
+    " :PluginInstall(!)    - install (update) plugins
+    " :PluginSearch(!) foo - search (or refresh cache first) for foo
+    " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+    "
+    " see :h vundle for more details or wiki for FAQ
+    " Put your non-Plugin stuff after this line
+
+" }
+
+
+"  Plugin customization {
+
+    " grep.vim {
+
+    if WINDOWS()
+        let Grep_Path = 'C:\cygwin64\bin\grep.exe' 
+        let Fgrep_Path = 'C:\cygwin64\bin\fgrep.exe' 
+        let Egrep_Path = 'C:\cygwin64\bin\egrep.exe' 
+        let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
+        let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
+        let Grep_Find_Path = 'C:\cygwin64\bin\find.exe' 
+        let Grep_Xargs_Path = 'C:\cygwin64\bin\xargs.exe' 
+    endif
+    " }
+
+    " netrw {
+    if WINDOWS()
+        let g:netrw_cygwin            = 1
+    endif
+    " }
+" }
 
 "------------------------------------------------------------------------------
-"  OS recognition function
-"------------------------------------------------------------------------------
-silent function! OSX()
-    return has('macunix')
-endfunction
-silent function! LINUX()
-    return has('unix') && !has('macunix') && !has('win32unix')
-endfunction
-silent function! WINDOWS()
-    return (has('win16') || has('win32') || has('win64'))
-endfunction
-
-
-"------------------------------------------------------------------------------
-"  Vundle setting
-"------------------------------------------------------------------------------
-" set the runtime path to include Vundle and initialize
-set rtp+=~/vimfiles/bundle/Vundle.vim/
-let path='~/vimfiles/bundle'
-call vundle#begin(path)
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
-
-"------------------------------------------------------------------------------
-"  Local parameters
-"------------------------------------------------------------------------------
-
-"------------------------------------------------------------------------------
-"  Additional plugins
-"------------------------------------------------------------------------------
-Plugin 'bufexplorer.zip'
-Plugin 'tpope/vim-fugitive'
-Plugin 'ervandew/supertab'
-Plugin 'Align'
-Plugin 'vimwiki'
-Plugin 'bash-support.vim'
-Plugin 'a.vim'
-Plugin 'yegappan/grep'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'c.vim'
-Plugin 'Vim-support'
-Plugin 'SuperTab'
-
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-
-Plugin 'nachumk/systemverilog.vim'
-
-
-
-
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-"------------------------------------------------------------------------------
-"  Plugin customization
-"------------------------------------------------------------------------------
-" grep.vim
-if WINDOWS()
-    let Grep_Path = 'C:\cygwin64\bin\grep.exe' 
-    let Fgrep_Path = 'C:\cygwin64\bin\fgrep.exe' 
-    let Egrep_Path = 'C:\cygwin64\bin\egrep.exe' 
-    let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
-    let Agrep_Path = 'C:\cygwin64\bin\agrep.exe' 
-    let Grep_Find_Path = 'C:\cygwin64\bin\find.exe' 
-    let Grep_Xargs_Path = 'C:\cygwin64\bin\xargs.exe' 
-endif
-
-"netrw
-if WINDOWS()
-    let g:netrw_cygwin            = 1
-endif
-
-"------------------------------------------------------------------------------
-"  GUI Look and feel
+" GUI Look and feel
 "------------------------------------------------------------------------------
 if !has("gui_running")
     color blue
-else 
+else
     color darkblue
 endif
 
@@ -135,7 +146,6 @@ if has('clipboard')
         set clipboard=unnamed
     endif
 endif
-
 
 "------------------------------------------------------------------------------
 "  VIM UI
