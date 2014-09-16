@@ -264,14 +264,8 @@ endif
 :nmap <C-S-right> :bprevious<cr>
 :map <C-b> :buffer 
 
-
-"""""""""""""""""""""""""""""""""
-""" Case options
-"""""""""""""""""""""""""""""""""
-" ignorecase sauf pour les recherches
-se smartcase
-se ignorecase
-
+" Comment
+:map <A-d> <leader>ci
 
 """""""""""""""""""""""""""""""""
 """ Plug-ins
@@ -287,24 +281,13 @@ else
 endif
 
 
-"""""""""""""""""""""""""""""""""
-""" Commandes utiles 
-"""""""""""""""""""""""""""""""""
-
+"------------------------------------------------------------------------------
+" Useful tips and commands
+"------------------------------------------------------------------------------
 
 """"" Pour virer les 'escaped characters' de couleurs
 " pour afficher le caractere special: CTRL_V puis CTRL+ALTGR+[
 " :%s/\[[0-9]\{-}m//g
-
-"------------------------------------------------------------------------------
-"  Tag search 
-"------------------------------------------------------------------------------
-function! SelectTag()
-  let curWord=expand("<cword>")
-  execute "tjump " curWord
-endfunction
-
-map <F8> :call SelectTag()<CR>
 
 
 "------------------------------------------------------------------------------
@@ -321,33 +304,8 @@ else
 endif
 endfunction
 
-function! Essai_f(replace)
-  return submatch(0).a:replace 
-endfunction
-
-command! -nargs=* Essai call Essai_f(<f-args>)
 
 
 
-"------------------------------------------------------------------------------
-"  Commented - deprecated
-"------------------------------------------------------------------------------
-"Commande LIP6
-"vnoremap / y/<C-R><CR>
-"vnoremap ? y?<C-R><CR>
 
-"vnoremap < <gv
-"vnoremap > >gv
-"vnoremap u ugv
-"vnoremap U Ugv
-"vnoremap ~ ~gv
-"vnoremap <C-Insert> ay
-"nnoremap <C-Insert> ay
-"nnoremap <S-Insert> aP`[
-"nnoremap P P`[
-"nnoremap p p`[
-"inoremap <S-Insert> <C-R>a<C-O>`[
-
-
-":set diffopt=iwhite
 
