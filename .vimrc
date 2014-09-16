@@ -73,6 +73,7 @@
     Plugin 'c.vim'
     Plugin 'Vim-support'
     Plugin 'SuperTab'
+    Plugin 'Mark'
 
     Plugin 'MarcWeber/vim-addon-mw-utils'
     Plugin 'tomtom/tlib_vim'
