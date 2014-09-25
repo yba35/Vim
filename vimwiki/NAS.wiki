@@ -53,6 +53,24 @@ bash less lftp vim sudo screen mc ncftp
 > echo 'admin ALL=(ALL) ALL' >> /opt/etc/sudoers
 > chmod 0440 /opt/etc/sudoers
 
+== Suite à une reinstallation ==
+se logguer en root (meme mot de passe que admin)
+puis:
+$ mkdir /opt
+$ mount -o bind /volume1/@optware /opt
+
+Add the following line to /etc/profile:
+
+PATH=/opt/bin:/opt/sbin:$PATH
+
+Create the /etc/rc.local file (chmod 755) and insert:
+
+#!/bin/sh
+
+# Optware setup
+[ -x /etc/rc.optware ] && /etc/rc.optware start
+
+
 
 = lien vers le SDK et les sources du NAS =
 http://sourceforge.net/projects/dsgpl/files/DSM%204.3%20Tool%20Chains/Marvell%20armada%20370%20Linux%203.2.40/
