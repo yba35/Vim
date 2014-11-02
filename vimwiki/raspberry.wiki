@@ -1,0 +1,9 @@
+= Reinstallation du raspberry =
+Utiliser l'utilitaire Windows pour reflasher la SDCard
+Insèrer la SDCard dans le raspberry et allumer avec le réseau connecté
+-> Attention: la mise à jour a échoué à la maison, il a fallu le faire depuis le réseau Altran.
+Problème de timeout ? Problème de firewall
+
+= Montage d'un disque NFS =
+IL faut mettre '*' dans le nom d'hote des paramètres NFS du dossier à partager sur le NAS
+Il faut aussi mettre 'Mappage de tous les User sur admin' dans le paramètre 'squash'
