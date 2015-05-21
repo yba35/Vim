@@ -18,7 +18,7 @@ Installation (Linux)
 cd HOME; git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd $HOME; git clone https://github.com/yba35/Vim.git vimconfig; ln vimconfig/.vimrc .vimrc
 
-Run vim and type :PuginInstall
+Run vim and type :PluginInstall
 
 
 
