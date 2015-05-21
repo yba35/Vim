@@ -36,8 +36,13 @@
 
 "  Vundle setting {
 
-    set rtp+=~/vimfiles/bundle/Vundle.vim/
-    let path='~/vimfiles/bundle'
+    if WINDOWS()
+      set rtp+=~/vimfiles/bundle/Vundle.vim/
+      let path='~/vimfiles/bundle'
+    else
+      set rtp+=~/.vim/bundle/Vundle.vim/
+      let path='~/.vim/bundle'
+    endif
     call vundle#begin(path)
     " alternatively, pass a path where Vundle should install plugins
     "call vundle#begin('~/some/path/here')
